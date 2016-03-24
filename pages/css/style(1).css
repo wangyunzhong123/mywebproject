@@ -73,7 +73,7 @@ ol {
   border-radius: 4px;
 }
 .ui-icon {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -344,7 +344,7 @@ a {
   padding-right: 25px;
 }
 .page-ui-small-header p .location-flag .flag {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -355,7 +355,7 @@ a {
   top: -13px;
 }
 .page-ui-small-header p .location-flag .britain-flag {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -367,7 +367,7 @@ a {
   background-position: -10px -318px;
 }
 .page-ui-small-header p .location-flag .usa-flag {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -379,7 +379,7 @@ a {
   background-position: -54px -318px;
 }
 .page-ui-small-header p .location-flag .usa-flag {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -892,7 +892,7 @@ footer .footleft {
   padding: 20px 0px;
 }
 footer .footleft h3.ui-logo-text {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -1344,7 +1344,7 @@ footer .copyrightInfo {
   font-size: 16px;
 }
 .home #customerWitness p .ui-comment {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -5545,7 +5545,7 @@ footer .copyrightInfo {
   cursor: pointer;
 }
 #sidebar .widget.widget_fixed_contact .ui-qq {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -5554,7 +5554,7 @@ footer .copyrightInfo {
   background-position: -212px -165px;
 }
 #sidebar .widget.widget_fixed_contact .ui-rocket {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -5563,7 +5563,7 @@ footer .copyrightInfo {
   background-position: -254px -363px;
 }
 #sidebar .widget.widget_fixed_contact .ui-top {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -5575,7 +5575,7 @@ footer .copyrightInfo {
   right: 45px;
 }
 #sidebar .widget.widget_fixed_contact .ui-wechat {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -5584,7 +5584,7 @@ footer .copyrightInfo {
   background-position: -360px -169px;
 }
 #sidebar .widget.widget_fixed_contact .ui-help {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -5752,7 +5752,7 @@ body.body-ui-privacy_policy .about-banner-header p .location-flag .flag,
 body.body-ui-cookies .about-banner-header p .location-flag .flag,
 body.body-ui-contact_us .about-banner-header p .location-flag .flag,
 body.body-ui-us .about-banner-header p .location-flag .flag {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -5767,7 +5767,7 @@ body.body-ui-privacy_policy .about-banner-header p .location-flag .britain-flag,
 body.body-ui-cookies .about-banner-header p .location-flag .britain-flag,
 body.body-ui-contact_us .about-banner-header p .location-flag .britain-flag,
 body.body-ui-us .about-banner-header p .location-flag .britain-flag {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -5783,7 +5783,7 @@ body.body-ui-privacy_policy .about-banner-header p .location-flag .usa-flag,
 body.body-ui-cookies .about-banner-header p .location-flag .usa-flag,
 body.body-ui-contact_us .about-banner-header p .location-flag .usa-flag,
 body.body-ui-us .about-banner-header p .location-flag .usa-flag {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
@@ -5799,7 +5799,7 @@ body.body-ui-privacy_policy .about-banner-header p .location-flag .usa-flag,
 body.body-ui-cookies .about-banner-header p .location-flag .usa-flag,
 body.body-ui-contact_us .about-banner-header p .location-flag .usa-flag,
 body.body-ui-us .about-banner-header p .location-flag .usa-flag {
-  background-image: url("../../../static/images/uicon.png");
+  background-image: url("../img/uicon.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
