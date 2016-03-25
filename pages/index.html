@@ -12,128 +12,17 @@
   <link rel="stylesheet" id="ui_style-css" href="./css/ui.style.min.css" type="text/css" media="all">
   <link rel="stylesheet" id="uicon-css" href="./css/style.css" type="text/css" media="all">
   <link rel="stylesheet" id="style-css" href="./css/style(1).css" type="text/css" media="all">
+
+  <!-- Bootstrap core CSS -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
   <link rel="shortcut icon" href="http://www.uiessays.com/favicon.ico">
   <style type="text/css">.fancybox-margin{margin-right:0px;}</style>
 </head>
 <body class="home blog">
-  <header>
-    <!--加载头部进度条-->
-    <div id="w-loading"><div style="width: 100%; display: none;"></div></div>
-    <!--顶部信息 开始  -->
-      <nav class="navbar navbar-default nav-home ">
-        <!--顶部信息 结束 -->
-        <div class="header-main">
-          <!--container Begin-->
-          <div class="container header-wrap">
-            <div class="navbar-header">
-              <button aria-expanded="false" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-              </button>
-              <a href="#" title="优易论文">
-                <img alt="优易论文" src="./img/11.png" class="lazy"></a>
-              <div class="visible-xs  user-icon">
-                <a class="qb" href="http://www.uiessays.com/#login" data-form="loginform" id="ui-login"></a>
-              </div>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-              <div id="main-nav" class="menu-header%e8%8f%9c%e5%8d%95-container">
-                <ul id="menu-header%e8%8f%9c%e5%8d%95" class="nav navbar-nav">
-                  <li class="current-menu-item">
-                    <a href="#">首页</a></li>
-                  <li class="service-list"><a href="http://www.uiessays.com/services">服务项目</a>
-                    <ul class="sub-menu">
-                      <li class="cl-arrow"><a href="http://www.uiessays.com/essay">代写留学论文</a></li>
-                      <li><a href="http://www.uiessays.com/dissertation">代写毕业论文</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="http://www.uiessays.com/category/essays">优易文库</a></li>
-                  <li><a href="http://www.uiessays.com/blog">优易博客</a></li>
-                  <li class="online-order"><a href="http://www.uiessays.com/order-now">在线定制</a>
-                    <ul class="sub-menu">
-                      <li><a href="http://www.uiessays.com/order-now">论文写作</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <div class="nav-left-login navbar-nav hidden-xs">
-                <a class="btn btn-default qb login_btn " href="#" data-form="loginform" id="ui-login">登录</a>
-                <a class="btn btn-primary qb reg " href="#">注册</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <div id="login" style="display: none">
-        <div class="login-box">
-
-          <div class="window_logo">
-            <img data-original="http://www.uiessays.com/static/images/logo_window.png" height="68" width="240" alt="登录logo" class="lazy" src="./img/logo_window.png" style="display: inline;">
-          </div>
-
-          <form name="loginform" id="loginform" action="http://www.uiessays.com/wp-login.php" class="hidden" method="post" novalidate="novalidate">
-            <div class="col-md-12">
-              <h4 class="text-center">欢迎回到优易论文 www.uiessays.com</h4>
-              <div class="input-group input-group-lg">
-                <span class="input-group-addon" id="email"><i class="uicon-mail"></i></span>
-                <input class="form-control required" id="username" name="username" type="text" placeholder="用户名/邮箱" aria-invalid="true" minlength="5">
-              </div>
-              <div class="input-group input-group-lg top20">
-                <span class="input-group-addon"><i class="uicon-key"></i></span>
-                <input name="password" id="password" class="form-control required" size="20" type="password" placeholder="密码" minlength="6">
-                <span class="input-group-btn tccBut">
-                  <input type="hidden" id="security" name="security" value="de27ef0e75">
-                  <input type="hidden" name="action" value="ui_ajax_login">
-                  <input name="redirect_to" class="redirect_to" value="http://www.uiessays.com/home/order" type="hidden">
-                  <button class="btn btn-success submit" type="submit">登 录</button>
-                </span>
-              </div>
-              <div class="login-model">
-                <div class="login-additional">
-                  <div class="lost">
-                    <a href="http://www.uiessays.com/wp-login.php?action=lostpassword">忘记密码 ?</a>
-                  </div>
-                  <div class="regsiter">
-                    <a href="javascript:switch_form('signupActive');" class="switch-active">注册新用户 ? </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-
-          <form name="signupform" id="signupform" action="http://www.uiessays.com/wp-login.php" class="hidden" method="post" novalidate="novalidate">
-            <div class="col-md-12">
-              <h4 class="text-center">请填写注册信息</h4>
-              <p class="status"> </p>
-              <div class="input-group input-group-lg">
-                <span class="input-group-addon"><i class="uicon-person"></i></span>
-                <input class="form-control required" id="username" name="username" type="text" placeholder="请输入用户名" minlength="5">
-              </div>
-              <div class="input-group input-group-lg top20">
-                <span class="input-group-addon"><i class="uicon-mail"></i></span>
-                <input class="form-control email required" id="email" name="email" type="text" placeholder="请输入电子邮箱地址">
-              </div>
-              <div class="input-group input-group-lg top20">
-                <span class="input-group-addon"><i class="uicon-key"></i></span>
-                <input class="form-control required" id="password" name="password" type="password" placeholder="请输入密码" minlength="6">
-              </div>
-              <div class="input-group top20 text-center reg-group">
-                <input type="hidden" id="security" name="security" value="9164168160">
-                <input type="hidden" name="action" value="ui_ajax_register">
-                <input name="redirect_to" class="redirect_to" value="http://www.uiessays.com/home/order" type="hidden">
-                <button class="btn btn-success submit" type="submit">注 册</button>
-                <span>已有帐号？立即<a href="javascript:switch_form('signin');" class="switch-active">登录</a></span>
-              </div>
-              <div class="agree-tos-pp">
-                点击注册即表明你同意本 <a href="http://www.uiessays.com/about/tos" target="_blank">服务条款</a> 和 <a href="http://www.uiessays.com/about/privacy_policy" target="_blank">隐私条款</a>。
-              </div>
-              <!--  -->
-            </div>
-          </form>
-
-        </div>
-      </div>
-
-  </header>
+<!--头部-->
+<div id = head>
+  </div>
   <section class="main-body">
     <!-- 测试图片轮播 开始 -->
     <div id="bannerWarp">
@@ -189,7 +78,7 @@
                           </div>
                         </div>
                       </div>
-                      <a class="project-item-btn biding" href="http://www.uiessays.com/order-now" target="_blank">立即开始</a>
+                      <a class="project-item-btn biding" href="learn.html" target="_blank">立即开始</a>
                       <div class="section-bottom-a"></div>
                       <div class="section-bottom-b"></div>
                     </div>
@@ -219,7 +108,7 @@
                           </div>
                         </div>
                       </div>
-                      <a class="project-item-btn biding" href="http://www.uiessays.com/order-now" target="_blank">立即开始</a>
+                      <a class="project-item-btn biding" href="test.html" target="_blank">立即开始</a>
                       <div class="section-bottom-a"></div>
                       <div class="section-bottom-b"></div>
                     </div>
@@ -249,7 +138,7 @@
                           </div>
                         </div>
                       </div>
-                      <a class="project-item-btn biding" href="http://www.uiessays.com/grammar-order-now" target="_blank">立即开始</a>
+                      <a class="project-item-btn biding" href="video.html" target="_blank">立即开始</a>
                       <div class="section-bottom-a"></div>
                       <div class="section-bottom-b"></div>
                     </div>
@@ -279,7 +168,7 @@
                           </div>
                         </div>
                       </div>
-                      <a class="project-item-btn biding" href="http://www.uiessays.com/application-order-now" target="_blank">立即开始</a>
+                      <a class="project-item-btn biding" href="game.html" target="_blank">立即开始</a>
                       <div class="section-bottom-a"></div>
                       <div class="section-bottom-b"></div>
                     </div>
@@ -330,4 +219,11 @@
         <h2>广州越秀健康家园</h2>
     </div>
   </footer>
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $("#head").load("head.html");
+  </script>
+
 </body>

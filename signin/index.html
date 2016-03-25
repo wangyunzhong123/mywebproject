@@ -46,10 +46,37 @@
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
   </form>
 
+
+  <button class="btn btn-primary "  data-toggle="modal" data-target="#myModal" >登录</button>
+  <!--模态对话框-->
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
 </div> <!-- /container -->
 
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
 </body>
 </html>
