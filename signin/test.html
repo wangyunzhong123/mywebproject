@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>丘比特天天在线</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="apple-mobile-web-app-title" content="">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta content="telephone=no" name="format-detection">
+
+  <!-- 新 Bootstrap 核心 CSS 文件 -->
+  <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 可选的Bootstrap主题文件（一般不使用） -->
+  <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+  <link href="<%=basePath%>resources/css/weui.min.css" rel="stylesheet">
+
+  <script src="<%=basePath%>resources/js/prefixfree.min.js"></script>
+
+  <script src="<%=basePath%>resources/js/modernizr.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+
+
+  <style type="text/css">
+
+    .content{
+    }
+
+    .cate_tab{-moz-box-pack: justify;-webkit-box-pack: justify;-webkit-box-lines: single;
+      align-content: center;
+    }
+    .cate_tab li{width: 33% ;text-align:center}
+    .cate_tab li a{}
+
+    .tab1{font-size: large; }
+    .tab1_edit{float: right;padding-right: 10%}
+    .line_begin{padding: 0px 15px 15px 15px;}
+
+    .tab1_ul li{list-style-type:none;height:40px;width: 100%;line-height: 40px;font-size: 16px;font-family: Arial,"微软雅黑",Helvetica,sans-serif}
+
+    .line_begin_1{margin-left: 15px;margin-right: 15px;}
+    .line_begin_2{width: 180px;-moz-box-pack: center;-webkit-box-pack: center;margin-left: auto;margin-right: auto;margin-top: 15px;}
+
+    .cate_tab label{
+      font-weight: bold;
+      width: 33.33%;
+      font-size: 14px;
+      display: block;
+      float: left;
+      text-align: center;
+      padding: 10px ;
+      border-top: 2px solid transparent;
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-bottom: 3px solid transparent;
+    }
+
+    .cate_tab input{
+      clear: both;
+      padding-top: 10px;
+      display: none;
+      text-align: center;
+    }
+
+    .cate_tab label:hover{
+      cursor: pointer;
+    }
+    #tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4 {
+      display: block;
+    }
+    .cate_tab input:checked + label {
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-left-color: transparent;
+      border-bottom-color: #FFB03D;
+      text-decoration: transparent;
+    }
+    .diver{
+      width: 75%;
+      border-bottom: 1px solid #dddddd;
+      margin: 1% 1px 1% auto;
+    }
+    .wang_weui_cell{
+      width: 100%;
+      margin: 10px auto;
+    }
+    .wang_weui_cell_bd{
+      color: #777;
+      font-size: 15px;
+    }
+    .wang_weui_cell_ft{
+      color: #222;
+      font-size: 16px;
+    }
+    .img-content{
+      width: 100%;
+      height: 180px;
+      background: url("./img/bg.jpg");
+      filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+      -moz-background-size:100% 100%;
+      background-size:100% 100%;
+      text-align: center;
+      align-content: center;
+    }
+    .img-content .img-content-img{
+      padding: 20px 0 5px 0;
+    }
+    .img-content .img-content-img image{
+      border: 3px solid #ffffff;
+    }
+    .img-content .img-content-name{
+      font-size: 16px;
+      color: #ffffff;
+    }
+    .img-content .img-content-id{
+      font-size: 15px;
+      color: #ffffff;
+    }
+  </style>
+
+
+  <style type="text/css">
+    .tab3_question_title{font-size: larger;margin-left: 4%;margin-top: 20px;}
+    .tab3_question_answer{font-size: large;margin: 6%;align-content: center}
+    .tab3_question_img{width: 30px;height: 30px;}
+    .tab3_question_reanswer{float:right; margin-right: 6%;}
+    .tab3_add_question{float:right; margin-top: 4%; margin-right: 6%;width: 90px;}
+  </style>
+
+
+</head>
+<body>
+<div class="content">
+  <div class="img-content">
+    <!--<img src="./img/1.png" alt="个人图片" class="img-rounded" width="100%" height="180px" >-->
+    <div class="img-content-img"><img class="img-circle " src="./img/person.png" width="110px" height="90px"></div>
+    <div class="img-content-name"><span>王二小</span></div>
+    <div class="img-content-id"><span>ID:32443563</span></div>
+
+  </div>
+  <div width="100%" class="cate_tab">
+    <input id="tab1" type="radio" name="tabs" checked onclick="tab_change(0)">
+    <label for="tab1">基本信息</label>
+    <input id="tab2" type="radio" name="tabs" onclick="tab_change(1)">
+    <label for="tab2">择偶条件</label>
+    <input id="tab3" type="radio" name="tabs" onclick="tab_change(2)">
+    <label for="tab3">我问你答</label>
+    <a></a>
+  </div>
+
+  <!--图片-->
+  <div class="">
+
+  </div>
+
+
+  <div id=tab11 class="container">
+    <div class="row wang_weui_cell">
+      <div class="col-xs-3 wang_weui_cell_bd">
+        性别
+      </div>
+      <div class="col-xs-9 wang_weui_cell_ft">
+        <span>的反dfg 第三方</span>
+      </div>
+    </div><div class="diver">
+  </div>
+    <div class="row  wang_weui_cell">
+      <div class="col-xs-3 wang_weui_cell_bd">
+        年龄
+      </div>
+      <div class="col-xs-9 wang_weui_cell_ft">
+        <span>电饭锅</span>
+      </div>
+    </div><div class="diver">
+  </div>
+    <div class="row wang_weui_cell">
+      <div class="col-xs-3 wang_weui_cell_bd">
+        身高
+      </div>
+      <div class="col-xs-9 wang_weui_cell_ft">
+        电饭锅
+      </div>
+    </div><div class="diver">
+  </div>
+    <div class="row wang_weui_cell">
+      <div class="col-xs-3 wang_weui_cell_bd">
+        学历
+      </div>
+      <div class="col-xs-9 wang_weui_cell_ft">
+       电饭锅
+      </div>
+    </div><div class="diver">
+  </div>
+    <div class="row wang_weui_cell">
+      <div class="col-xs-3 wang_weui_cell_bd">
+        职业
+      </div>
+      <div class="col-xs-9 wang_weui_cell_ft">
+       电饭锅
+      </div>
+    </div><div class="diver">
+  </div>
+    <div class="row wang_weui_cell">
+      <div class="col-xs-3 wang_weui_cell_bd">
+        收入
+      </div>
+      <div class="col-xs-9 wang_weui_cell_ft">
+        电饭锅
+      </div>
+    </div><div class="diver">
+  </div>
+    <div class="row wang_weui_cell">
+      <div class="col-xs-3 wang_weui_cell_bd">
+        居住地
+      </div>
+      <div class="col-xs-9 wang_weui_cell_ft">
+        电饭锅
+      </div>
+    </div><div class="diver">
+  </div>
+    <div class="row wang_weui_cell">
+      <div class="col-xs-3 wang_weui_cell_bd">
+        籍贯
+      </div>
+      <div class="col-xs-9 wang_weui_cell_ft">
+         东风公司
+      </div>
+    </div>
+
+    <!--<span class="line_begin" >内心独白:</span>-->
+    <!--<div width="100%" >-->
+      <!--<textarea type="text" class="form-control line_begin_1 " readonly="readonly"  rows=6 placeholder="填写内心独白" >${user.dubai}</textarea>-->
+    <!--</div>-->
+
+    <div class="line_begin_2">
+      <a href="<%=basePath%>pages/edit_personalinfo.jsp" class="weui_btn weui_btn_primary">编辑修改</a>
+
+    </div>
+
+  </div>
+
+
+
+</div>
+</body>
+<script type="text/javascript">
+  $(function(){
+    $(document.getElementById("tab2")).hide();
+    $(document.getElementById("tab3")).hide();
+  })
+  function tab_change(which){
+    var $tabs = $("li");
+    var ul_button0 = $tabs[0];
+    var $ul_button1 = $tabs[1];
+    var $ul_button2 = $tabs[2];
+    var $tab1 = $(document.getElementById("tab11"));
+    var $tab2 = $(document.getElementById("tab12"));
+    var $tab3 = $(document.getElementById("tab13"));
+    // var $tab3 = $(document.getElementById("tab3"));
+    switch(which){
+      case 0:
+//                ul_button0.addClass("active");
+//                $ul_button1.removeClass("active");
+//                $ul_button2.removeClass("active");
+        $tab1.show();
+        $tab2.hide();
+        $tab3.hide();
+        break;
+      case 1:
+//                $ul_button1.addClass("active");
+//                $ul_button0.removeClass("active");
+//                $ul_button2.removeClass("active");
+        $tab2.show();
+        $tab1.hide();
+        $tab3.hide();
+        break;
+      case 2:
+//                $ul_button2.addClass("active");
+//                $ul_button0.removeClass("active");
+//                $ul_button1.removeClass("active");
+
+        $tab3.show();
+        $tab1.hide();
+        $tab2.hide();
+
+        break;
+      default:
+        break;
+
+    }
+  }
+</script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+</html>
