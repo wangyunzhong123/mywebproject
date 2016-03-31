@@ -970,6 +970,10 @@ footer .copyrightInfo {
   footer {
     /*在小于768像素的屏幕里,这里的样式才生效*/
   }
+  /*sider是否显示,,侧边广告*/
+  .widget-area{
+    display: none;
+  }
   footer .footleft .text-left {
     text-align: center;
   }
@@ -1088,18 +1092,18 @@ footer .copyrightInfo {
   display: inline-block;
 }
 .home .banner .container .btn-banner-group .btn-online-order {
-  background-image: url("../img/uicon.png");
+  background-image: url("../img/centerbar.png");
   text-indent: -99999px;
   background-repeat: no-repeat;
   display: block;
-  background-color: #3498db;
+  background-color: #00cc00;
   color: #ffffff;
   padding: 12px 24px;
   font-size: 16px;
   border-color: #3498db;
   width: 300px;
   position: relative;
-  background-position: -160px -81px;
+  /*background-position: -160px -81px;*/
 }
 .home .banner .container .btn-banner-group .btn-online-order::after,
 .home .banner .container .btn-banner-group .btn-online-order::before {
@@ -1140,10 +1144,12 @@ footer .copyrightInfo {
 .home #servicesWarp .serviceItem-item .servie-item-box {
   transition: all 0.2s linear 0s;
   padding-top: 2px;
+  box-shadow: 20px 15px 30px rgba(0, 100, 0, 1);
+  margin: auto 20px;
 }
 .home #servicesWarp .serviceItem-item .servie-item-box:hover {
   z-index: 2;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 25px 30px rgba(0, 150, 0, 0.8);
   transform: translate3d(0px, -2px, 0px);
 }
 .home #servicesWarp .serviceItem-item .details {
@@ -1247,7 +1253,7 @@ footer .copyrightInfo {
 .home #servicesWarp .serviceItem-item .project-item-btn {
   display: block;
   height: 45px;
-  background-color: rgba(52, 152, 219, 0.8);
+  background-color: rgba(0, 210, 0, 0.8);
   border-radius: 0px;
   text-decoration: none;
   color: #ffffff;
@@ -3155,212 +3161,6 @@ footer .copyrightInfo {
 .school-list li:hover dt a {
   color: #ff9d00;
   text-decoration: none;
-}
-.container-single-school .school-banner {
-  background: #222222 url("../../../static/images//school/Cambridge.jpg") no-repeat scroll center center / cover;
-  height: 350;
-  margin-bottom: 20px;
-}
-.container-single-school .school-banner .banner-overlay {
-  z-index: 0;
-  overflow: hidden;
-  width: 100%;
-  background: transparent url("../../../static/images//default_overlay.png") repeat scroll 0px 0px;
-  min-height: 350px;
-  min-height: 350;
-}
-.container-single-school .school-banner .banner-overlay h1 {
-  color: #fff;
-  text-align: center;
-}
-.container-single-school .school-banner .banner-overlay .school-logo {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  margin: 50px auto 10px;
-  padding: 5px;
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.container-single-school .school-banner .banner-overlay .school-logo img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-.container-single-school .school-banner .banner-overlay h1 {
-  font-size: 24px;
-}
-.container-single-school .school-banner .banner-overlay .intro {
-  color: rgba(254, 254, 254, 0.85);
-  font-size: 13px;
-  margin-top: 10px;
-}
-.container-single-school .school-banner .banner-overlay .intro::before,
-.container-single-school .school-banner .banner-overlay .intro::after {
-  content: "";
-  height: 10px;
-  width: 10px;
-  display: block;
-  position: absolute;
-}
-.container-single-school .school-banner .banner-overlay .intro::before {
-  background: transparent url("../../../static/images//icon/quotes-before.png") no-repeat scroll 0% 0% / cover;
-  left: 0px;
-  top: 0px;
-}
-.container-single-school .school-banner .banner-overlay .intro::after {
-  display: inline-block;
-  background: transparent url("../../../static/images//icon/quotes-after.png") no-repeat scroll 0% 0% / cover;
-}
-.container-single-school .container-school-main .school-atlas {
-  position: relative;
-  margin: 0px 0px 20px;
-}
-.container-single-school .container-school-main .school-atlas span {
-  position: absolute;
-  bottom: 20px;
-  background-color: #000000;
-  color: #ffffff;
-  right: 5px;
-  padding: 4px 20px;
-  border-radius: 5px 0px 0px 5px;
-}
-.container-single-school .container-school-main .school-atlas img {
-  min-width: 350px;
-}
-.container-single-school .container-school-main .btn-area {
-  width: 100%;
-}
-.container-single-school .container-school-main .info .school-box {
-  margin: 0px 15px;
-  background-color: #ffffff;
-  border: 1px solid #e6e6e6;
-  border-radius: 4px;
-  padding-top: 20px;
-}
-.container-single-school .container-school-main .info .school-box dt {
-  width: 90px;
-  line-height: 35px;
-  display: block;
-  float: left;
-  color: #999999;
-}
-.container-single-school .container-school-main .info .school-box dd {
-  line-height: 35px;
-  width: 220px;
-  float: left;
-}
-.container-single-school .container-school-main .info .school-box dd .en-dd {
-  font-size: 12px;
-  line-height: 18px;
-  padding-top: 4px;
-  display: inline-block;
-}
-.container-single-school .container-school-main .info .school-box .cn-introduction {
-  border-bottom: 1px solid #F1F1F1;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-}
-.container-single-school .container-school-main .info .nav-school {
-  margin-top: 20px;
-  display: inline-block;
-  width: 100%;
-}
-.container-single-school .container-school-main .info .nav-school .nav-tabs li a,
-.container-single-school .container-school-main .info .nav-school .nav-tabs li label {
-  blr: expression(this.onFocus=this.blur());
-}
-.container-single-school .container-school-main .info .nav-school .nav-tabs li a,
-.container-single-school .container-school-main .info .nav-school .nav-tabs li label {
-  outline: none;
-}
-.container-single-school .container-school-main .info .nav-school .nav-tabs li a {
-  float: left;
-  border: 1px solid #cccccc;
-  height: 50px;
-  margin-right: 5px;
-  background-color: #fefefe;
-  line-height: 50px;
-  padding: 0px 20px;
-  color: #999;
-}
-.container-single-school .container-school-main .info .nav-school li.active a {
-  color: #000;
-  border-top: 4px solid #00a2ca;
-  line-height: 45px;
-  height: 50px;
-  border-bottom: 1px solid #fff;
-  background: #fff none repeat scroll 0% 0%;
-  font-weight: 800;
-}
-.container-single-school .container-school-main .info .nav-school .school-box {
-  border-width: 0px 1px 1px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
-  padding-bottom: 20px;
-}
-.container-single-school .container-school-main .info .nav-school .school-box .table-school-edu {
-  box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
-}
-.container-single-school .container-school-main .info .nav-school .school-box .table-school-edu th,
-.container-single-school .container-school-main .info .nav-school .school-box .table-school-edu td {
-  text-align: center;
-  vertical-align: middle;
-}
-.container-single-school .container-school-main .info .nav-school .school-box .table-school-edu th .label,
-.container-single-school .container-school-main .info .nav-school .school-box .table-school-edu td .label {
-  font-weight: 100;
-}
-.container-single-school .container-school-main .info .nav-school .school-box .table-school-edu .link {
-  font-size: 12px;
-}
-.container-single-school .container-school-main .info .nav-school .school-box .rank-wrap h4 {
-  font-size: 18px;
-  text-align: center;
-}
-.container-single-school .container-school-main .info .nav-school .school-box .rank-wrap li {
-  line-height: 28px;
-  font-size: 14px;
-  color: #666;
-}
-.container-single-school .container-school-main .recommend h3 {
-  font-size: 1.8rem;
-  color: #555555;
-  font-weight: 800;
-}
-.container-single-school .container-school-main .recommend h4 a {
-  font-size: 16px;
-  line-height: 18px;
-  color: #333333;
-}
-.container-single-school .container-school-main .recommend h4 a img {
-  float: left;
-  margin-right: 10px;
-  border-radius: 50%;
-}
-.container-single-school .container-school-main .recommend .media {
-  position: relative;
-}
-.container-single-school .container-school-main .recommend .media .logo {
-  position: absolute;
-  top: 30px;
-  border: 4px solid #fff;
-  border-radius: 50%;
-  left: 80px;
-  width: 40px;
-}
-.container-single-school .container-school-main .recommend .media-body {
-  position: relative;
-  padding-left: 10px;
-}
-.container-single-school .container-school-main .recommend .media-heading {
-  margin-bottom: 10px;
-}
-.container-single-school .container-school-main .recommend p {
-  font-size: 12px;
-  color: #999999;
-  padding-left: 10px;
-  height: 40px;
 }
 .page-nav-default {
   text-align: center;

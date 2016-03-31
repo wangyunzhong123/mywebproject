@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>知识学习</title>
+  <title>知识学习</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="keywords" content="越秀区健康家园">
+  <meta name="description" content="越秀区健康家园">
   <!-- Bootstrap core CSS -->
   <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/the-modal.css" media="all">
+  <link rel="stylesheet" type="text/css" href="./css/demo-modals.css" media="all">
+  <style type="text/css">
+    .content{
+      align-content: center;
+      text-align: center;
+      /*background-color: #ffffff;*/
+    }
+    .content .person-info .person-info-line{
+      margin: 10px auto;
+    }
+    .content .person-info .person-info-line h4{
+      display: inline;
+    }
+    .content .person-info .person-info-line span{
+      margin: auto 3% auto 5px;
+    }
+    .diver{
+      width: 75%;
+      margin: 15px auto;
+      border: 1px solid #e5e5e5;
+    }
+    .content .question{
+      align-content:flex-start;
+      text-align: left;
+      margin: 20px 10% 30px 15%;
+      border: 2px solid #e5e5e5;
+    }
+    .content .question h3{
+      margin: 20px auto;
+    }
+    .content .question input{
+      margin: 20px auto 15px 6%;
+    }
+    .content .question-control ,.question-grid{
+      float: right;
+      margin: 5% 15% 10% auto;
+      border: 1px solid #e5e5e5;
+      border-radius: 10%;
+      padding: 20px;
+      background-color: #00a0d2;
+    }
+    .content .question-control button{
+      margin: auto 10%;
+    }
+    .modal{
+      background-color: #FFFFFF;
+      font-size: 18px;
+      font-family: "微软雅黑", "Microsoft Yahei";
+    }
+    .modal .modal-line{
+      margin: 5%;
+      padding: 15px;
+      border: 1px solid #a6e1ec;
 
+    }
+    .modal .modal-line .modal-select{
+      padding: 5px;
+      width: 18%;
+
+    }
+    .modal .wang-btn{
+      width: 30%;
+      height: 50px;
+      padding: 3px;
+      margin: 15px 33%;
+    }
+  </style>
 
 </head>
 
@@ -13,15 +86,213 @@
   <!--头部-->
   <div id = head>
   </div>
-  <div id="content" class="container">
+  <div id="content" class="content">
+    <h2>健康资讯学习系统</h2>
+    <h5>本试卷共10道题目,必须全部答完才能提交</h5>
+    <!--答题人的详细信息-->
+    <div class="person-info">
+      <div class="person-info-line">
+        <h4>地区: </h4><span>北京东城区</span>
+        <h4>姓名: </h4><span>王二</span>
+        <h4>职业: </h4><span>科学家</span>
+        <h4>年龄: </h4><span>25-39</span>
+
+      </div>
+      <div class="person-info-line">
+        <h4>地区: </h4><span>北京东城区</span>
+        <h4>姓名: </h4><span>王二</span>
+        <h4>职业: </h4><span>科学家</span>
+        <h4>年龄: </h4><span>25-39</span>
+
+      </div>
+      <div class="person-info-line">
+        <h4>地区: </h4><span>北京东城区</span>
+        <h4>姓名: </h4><span>王二</span>
+        <h4>职业: </h4><span>科学家</span>
+        <h4>年龄: </h4><span>25-39</span>
+
+      </div>
+    </div>
+    <!--分割线-->
+    <div class="diver"></div>
+    <!--题目的开始-->
+    <div class="question">
+      <h3>1. 你知道艾滋病有那些传播途径吗?</h3>
+      <form>
+        <p><input type="checkbox" name="">母婴传播</p>
+        <p><input type="checkbox" name="">性传播</p>
+        <p><input type="checkbox" name="">血液传播</p>
+
+      </form>
+    </div>
+
+    <!--答题状态,网格显示-->
+    <div class="question-grid">
+      <table id="result-table"></table>
+    </div>
+
+    <!--上一题,下一题按钮-->
+    <div class="row question-control">
+      <div class="col-xs-6 col-md-6"><button type="button" class="btn btn-success">上一题</button></div>
+      <div class="col-xs-6 col-md-6"><button type="button" class="btn btn-success">下一题</button></div>
+    </div>
+  </div>
+
+<!--进入页面的模态对话框,用户用户选择信息-->
+  <div class="modal" id="test-modal" style="display: none">
+    <a href="#" class="close" id="close">&times;</a>
+    <!--地区,街道-->
+    <div class="modal-line">
+      <span>地区: </span>
+      <select id="select1" class="modal-select">
+        <option ></option>
+      </select>
+      <select id="select2" class="modal-select">
+        <option ></option>
+      </select>
+      <select id="" class="modal-select">
+        <option ></option>
+      </select>
+    </div>
+    <!--姓名,年龄-->
+    <div class="modal-line">
+      <span>姓名: </span><input type="text" name="name" >
+
+      <span style="margin-left: 15px;">年龄:</span>
+      <select id="select3" class="modal-select">
+
+      </select>
+      <span style="margin-left: 15px;">婚姻: </span>
+      <select id="select4" class="modal-select">
+
+      </select>
+    </div>
+    <!--性别,文化成都,职业-->
+    <div class="modal-line">
+      <span style="margin-left: 15px;">性别:</span>
+      <select id="" class="modal-select">
+
+      </select>
+
+      <span style="margin-left: 15px;">文化程度:</span>
+      <select id="" class="modal-select">
+
+      </select>
+      <span style="margin-left: 15px;">职业: </span>
+      <select id="" class="modal-select">
+
+      </select>
+    </div>
+    <!--经济收入,有效证件,学习内同-->
+    <div class="modal-line">
+      <span style="margin-left: 15px;">经济收入:</span>
+      <select id="" class="modal-select">
+
+      </select>
+
+      <span style="margin-left: 15px;">有效证件:</span>
+      <select id="" class="modal-select">
+
+      </select>
+      <span style="margin-left: 15px;">学习内容: </span>
+      <select id="" class="modal-select">
+
+      </select>
+    </div>
+
+    <button type="button" class="btn btn-primary wang-btn">开始学习</button>
+
 
   </div>
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.the-modal.js"></script>
+  <script type="text/javascript">
+    jQuery(function($){
+      $("#test-modal").modal().open();
+
+      // attach modal close handler
+      $(".close").on("click", function(e){
+        e.preventDefault();
+        $("#test-modal").modal().close();
+      });
+
+    });
+    $(function () {
+      var $table = $("#result-table");
+      var table = $table[0];
+      var newRow1 = table.insertRow();
+      var newRow2 = table.insertRow();
+      var newRow3 = table.insertRow();
+
+      var newCell1 = newRow1.insertCell(0);
+      var newCell2 = newRow1.insertCell(1);
+      var newCell3 = newRow1.insertCell(2);
+      var newCell4 = newRow1.insertCell(2);
+      var newCell5 = newRow1.insertCell(2);
+
+      var newCell6 = newRow2.insertCell(0);
+      var newCell7 = newRow2.insertCell(1);
+      var newCell8 = newRow2.insertCell(2);
+      var newCell9 = newRow2.insertCell(2);
+      var newCell10 = newRow2.insertCell(2);
+
+
+    });
+  </script>
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script type="text/javascript">
-  $("#head").load("head.html");
+  $(function () {
+    $("#head").load("head.html",function () {
+      $("#tab1").removeClass("current-menu-item");
+      $("#tab3").removeClass("current-menu-item");
+      $("#tab4").removeClass("current-menu-item");
+      $("#tab5").removeClass("current-menu-item");
+
+      $("#tab2").addClass("current-menu-item");
+    });
+
+  });
+
+
 </script>
 
 </html>

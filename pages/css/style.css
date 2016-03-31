@@ -1,13 +1,13 @@
-@font-face {
-    font-family: 'uiicon';
-    src:    url('fonts/uiicon.eot?t4nkly');
-    src:    url('fonts/uiicon.eot?t4nkly#iefix') format('embedded-opentype'),
-        url('fonts/uiicon.ttf?t4nkly') format('truetype'),
-        url('fonts/uiicon.woff?t4nkly') format('woff'),
-        url('fonts/uiicon.svg?t4nkly#uiicon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+/*@font-face {*/
+    /*font-family: 'uiicon';*/
+    /*src:    url('fonts/uiicon.eot?t4nkly');*/
+    /*src:    url('fonts/uiicon.eot?t4nkly#iefix') format('embedded-opentype'),*/
+        /*url('fonts/uiicon.ttf?t4nkly') format('truetype'),*/
+        /*url('fonts/uiicon.woff?t4nkly') format('woff'),*/
+        /*url('fonts/uiicon.svg?t4nkly#uiicon') format('svg');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+/*}*/
 
 [class^="uicon-"], [class*=" uicon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */

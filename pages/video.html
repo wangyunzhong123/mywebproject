@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>视频</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="keywords" content="越秀区健康家园">
+  <meta name="description" content="越秀区健康家园">
+  <link rel="stylesheet" id="ui_style-css" href="./css/ui.style.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="uicon-css" href="./css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" id="style-css" href="./css/style(1).css" type="text/css" media="all">
   <!-- Bootstrap core CSS -->
   <link href="./css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,7 +31,15 @@
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script type="text/javascript">
-  $("#head").load("head.html");
+  $("#head").load("head.html",function () {
+    $("#tab1").removeClass("current-menu-item");
+    $("#tab2").removeClass("current-menu-item");
+    $("#tab3").removeClass("current-menu-item");
+    $("#tab5").removeClass("current-menu-item");
+
+    $("#tab4").addClass("current-menu-item");
+  });
+
 </script>
 
 </html>
