@@ -40,18 +40,23 @@
       border: 2px solid #e5e5e5;
     }
     .content .question h3{
-      margin: 20px auto;
+      margin: 20px 15px;
     }
     .content .question input{
       margin: 20px auto 15px 6%;
     }
-    .content .question-control ,.question-grid{
+    .content .question-result{
       float: right;
-      margin: 5% 15% 10% auto;
+      margin-right: 15%;
+    }
+    .content .question-control ,.question-grid{
+      margin: 5% 15% 20px auto;
       border: 1px solid #e5e5e5;
       border-radius: 10%;
       padding: 20px;
-      background-color: #00a0d2;
+    }
+    .content .question-grid td{
+      width: 30px;
     }
     .content .question-control button{
       margin: auto 10%;
@@ -116,26 +121,31 @@
     <!--分割线-->
     <div class="diver"></div>
     <!--题目的开始-->
-    <div class="question">
-      <h3>1. 你知道艾滋病有那些传播途径吗?</h3>
-      <form>
-        <p><input type="checkbox" name="">母婴传播</p>
-        <p><input type="checkbox" name="">性传播</p>
-        <p><input type="checkbox" name="">血液传播</p>
+    <div class="question" id="questiondiv">
+      <!--<h3 id="questiontitle">1. 你知道艾滋病有那些传播途径吗?</h3>-->
+      <!--<form>-->
+        <!--<p><input type="checkbox" name="">母婴传播</p>-->
+        <!--<p><input type="checkbox" name="">性传播</p>-->
+        <!--<p><input type="checkbox" name="">血液传播</p>-->
 
-      </form>
+      <!--</form>-->
     </div>
 
-    <!--答题状态,网格显示-->
-    <div class="question-grid">
-      <table id="result-table"></table>
+    <div class="question-result">
+      <!--答题状态,网格显示-->
+      <div class="question-grid" id="result-table">
+        <!--<table id="result-table">-->
+        <!---->
+        <!--</table>-->
+      </div>
+
+      <!--上一题,下一题按钮-->
+      <div class="row question-control">
+        <div class="col-xs-6 col-md-6"><button id=btnprev type="button" class="btn btn-success">上一题</button></div>
+        <div class="col-xs-6 col-md-6"><button id="btnnext" type="button" class="btn btn-success">下一题</button></div>
+      </div>
     </div>
 
-    <!--上一题,下一题按钮-->
-    <div class="row question-control">
-      <div class="col-xs-6 col-md-6"><button type="button" class="btn btn-success">上一题</button></div>
-      <div class="col-xs-6 col-md-6"><button type="button" class="btn btn-success">下一题</button></div>
-    </div>
   </div>
 
 <!--进入页面的模态对话框,用户用户选择信息-->
@@ -219,27 +229,91 @@
       });
 
     });
+    /*动态创建表格,显示答题状态*/
     $(function () {
-      var $table = $("#result-table");
-      var table = $table[0];
-      var newRow1 = table.insertRow();
-      var newRow2 = table.insertRow();
-      var newRow3 = table.insertRow();
-
-      var newCell1 = newRow1.insertCell(0);
-      var newCell2 = newRow1.insertCell(1);
-      var newCell3 = newRow1.insertCell(2);
-      var newCell4 = newRow1.insertCell(2);
-      var newCell5 = newRow1.insertCell(2);
-
-      var newCell6 = newRow2.insertCell(0);
-      var newCell7 = newRow2.insertCell(1);
-      var newCell8 = newRow2.insertCell(2);
-      var newCell9 = newRow2.insertCell(2);
-      var newCell10 = newRow2.insertCell(2);
-
-
+      var rowCount =2;
+      var cellCount =5;
+      var table=$("<table border=\"1\">");
+      table.appendTo($("#result-table"));
+      for(var i=0;i<rowCount;i++)
+      {
+        var tr=$("<tr></tr>");
+        tr.appendTo(table);
+        for(var j=0;j<cellCount;j++)
+        {
+          var td=$("<td>"+(i*cellCount+j+1)+"</td>");
+          td.appendTo(tr);
+        }
+      }
+//      trend.appendTo(table);
+      $("#result-table").append("</table>");
     });
+
+    /*使用ajax从后台请求题目信息,一般为json串,*/
+    /*将字符串解析成json数组*/
+//    var t2="[{name:'zhangsan',age:'24'},{name:'lisi',age:'30'},{name:'wangwu',age:'16'},{name:'tianqi',age:'7'}] ";
+//    var myobj=eval(t2);
+//    for(var i=0;i<myobj.length;i++) {
+//      alert(myobj[i].name);
+//    }
+
+    /*全局变量,标志目前所在的题目*/
+    var where = 0;
+    var questionlist = "[{title:'流感有哪几种传播途径?',selector:[{option:'A. 口腔'},{option:'B. 皮肤'},{option:'C. 空气'},{option:'D. 饮用水'}]}," +
+      "{title:'流感有哪几种传播途径?',selector:[{option:'A. 口腔1'},{option:'B. 皮肤2'},{option:'C. 空气3'},{option:'D. 饮用水4'}]}]";
+    var question = eval(questionlist);
+
+    /*存储临时答案,使用数组*/
+    var answer = new Array(question.length);
+
+
+    /*定位第几个问题*/
+    function toquestion(index) {
+      /*先删除已有元素*/
+      $("#questiondiv").children("h3").remove();
+      $("#questiondiv").children("p").remove();
+
+      var $h3 = $("<h3>"+(index+1)+". "+question[index].title+"</h3>");
+      //<p><input type="checkbox" name="">母婴传播</p>
+      $("#questiondiv").append($h3);
+      for(var i =0;i<question[index].selector.length;i++){
+        var $input = $("<p><input type='radio' name='radio' value='"+i+"' onclick='toselect(this)' >"+question[index].selector[i].option+"</p>")
+        $("#questiondiv").append($input);
+      }
+    }
+
+    /*设置上一题下一题的点击事件*/
+    $("#btnprev").click(function () {
+      if(where>0){
+        where = where-1;
+        toquestion(where);
+      }
+      else
+        alert("已是第一题!");
+    });
+    $("#btnnext").click(function () {
+      if(where<question.length-1){
+        where = where +1;
+        toquestion(where);
+      }
+      else
+        alert("已是最后一题!");
+    });
+
+    /*点击答案的时候,存储答案到临时数组*/
+//    $(".question input").
+    function toselect(obj){
+      var $radiolist = $(document.getElementsByName("radio"));
+//      alert("点击了"+ $radiolist.indexOf(obj));
+      alert("点击了"+ $("input[name='radio']:checked").val());
+    }
+
+    /*初始化*/
+    $(function () {
+      toquestion(0);
+    })
+
+
   </script>
 </body>
 
