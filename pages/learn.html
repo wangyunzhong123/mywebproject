@@ -58,6 +58,10 @@
     .content .question-grid td{
       width: 30px;
     }
+    /*给表格上颜色,表示此题已答*/
+    .content .question-grid td .haveanswered{
+      background-color: red;
+    }
     .content .question-control button{
       margin: auto 10%;
     }
@@ -141,8 +145,9 @@
 
       <!--上一题,下一题按钮-->
       <div class="row question-control">
-        <div class="col-xs-6 col-md-6"><button id=btnprev type="button" class="btn btn-success">上一题</button></div>
-        <div class="col-xs-6 col-md-6"><button id="btnnext" type="button" class="btn btn-success">下一题</button></div>
+        <div class="col-xs-4 col-md-4"><button id=btnprev type="button" class="btn btn-success">上一题</button></div>
+        <div class="col-xs-4 col-md-4"><button id="btnnext" type="button" class="btn btn-success">下一题</button></div>
+        <div class="col-xs-4 col-md-4"><button id="submit" type="button" class="btn btn-success">提交</button></div>
       </div>
     </div>
 
@@ -250,8 +255,18 @@
           td.appendTo(tr);
         }
       }
-//      trend.appendTo(table);
       $("#result-table").append("</table>");
+      //设置td的点击事件
+//      var tab = $("#result-table table")[0];
+//      for(var i=0;i<tab.rows.length;i++){
+//        for(var j=0;j<tab.rows[i].cells.length;j++){
+//          var td = tab.rows[i].cells[j];
+//          td.click == function () {
+//            alert("asdf");
+//            toquestion(tab.rows[i].cells[j].cellIndex);
+//          };
+//        }
+//      }//为何没有效果
     });
 
     /*使用ajax从后台请求题目信息,一般为json串,*/
@@ -264,12 +279,27 @@
 
     /*全局变量,标志目前所在的题目*/
     var where = 0;
-    var questionlist = "[{title:'流感有哪几种传播途径?',selector:[{option:'A. 口腔'},{option:'B. 皮肤'},{option:'C. 空气'},{option:'D. 饮用水'}]}," +
-      "{title:'流感有哪几种传播途径?',selector:[{option:'A. 口腔1'},{option:'B. 皮肤2'},{option:'C. 空气3'},{option:'D. 饮用水4'}]}]";
+    var questionlist = "[{type:0,title:'流感有哪几种传播途径?',selector:[{option:'A. 口腔'},{option:'B. 皮肤'},{option:'C. 空气'},{option:'D. 饮用水'}]}," +
+      "{type:1,title:'流感有哪几种传播途径?',selector:[{option:'A. 口腔1'},{option:'B. 皮肤2'},{option:'C. 空气3'},{option:'D. 饮用水4'}]}," +
+      "{type:1,title:'流感有哪几种传播途径?',selector:[{option:'A. 口腔1'},{option:'B. 皮肤2'},{option:'C. 空气3'},{option:'D. 饮用水4'}]}," +
+      "{type:1,title:'流感有哪几种传播途径?',selector:[{option:'A. 口腔1'},{option:'B. 皮肤2'},{option:'C. 空气3'},{option:'D. 饮用水4'}]}," +
+      "{type:1,title:'流感有哪几种传播途径?',selector:[{option:'A. 口腔1'},{option:'B. 皮肤2'},{option:'C. 空气3'},{option:'D. 饮用水4'}]}," +
+      "{type:0,title:'流感有哪几种传播途径?',selector:[{option:'A. 口腔1'},{option:'B. 皮肤2'},{option:'C. 空气3'},{option:'D. 饮用水4'}]}," +
+      "{type:0,title:'流感有哪几种传播途径?',selector:[{option:'A. 口腔1'},{option:'B. 皮肤2'},{option:'C. 空气3'},{option:'D. 饮用水4'}]}," +
+      "{type:0,title:'流感有哪几种传播途径?',selector:[{option:'A. 口腔1'},{option:'B. 皮肤2'},{option:'C. 空气3'},{option:'D. 饮用水4'}]}," +
+      "{type:0,title:'流感有哪几种传播途径?',selector:[{option:'A. 口腔1'},{option:'B. 皮肤2'},{option:'C. 空气3'},{option:'D. 饮用水4'}]}," +
+      "{type:1,title:'流感有哪几种传播途径?',selector:[{option:'A. 口腔1'},{option:'B. 皮肤2'},{option:'C. 空气3'},{option:'D. 饮用水4'}]}]";
     var question = eval(questionlist);
 
+    var num = question.length;
     /*存储临时答案,使用数组*/
-    var answer = new Array(question.length);
+    var answer = new Array(num);
+    //初始化
+    var b = {};
+    b.ans=[];
+    for(var i=0;i<num;i++){
+      answer[i] = b;
+    }
 
 
     /*定位第几个问题*/
@@ -278,13 +308,38 @@
       $("#questiondiv").children("h3").remove();
       $("#questiondiv").children("p").remove();
 
-      var $h3 = $("<h3>"+(index+1)+". "+question[index].title+"</h3>");
+      var $h3;
+      if(question[index].type==0)
+        $h3 = $("<h3>"+(index+1)+". "+question[index].title+"<单选>"+"</h3>");
+      if(question[index].type==1)
+        $h3 = $("<h3>"+(index+1)+". "+question[index].title+"<多选>"+"</h3>");
+
       //<p><input type="checkbox" name="">母婴传播</p>
       $("#questiondiv").append($h3);
-      for(var i =0;i<question[index].selector.length;i++){
-        var $input = $("<p><input type='radio' name='radio' value='"+i+"' onclick='toselect(this)' >"+question[index].selector[i].option+"</p>")
-        $("#questiondiv").append($input);
+      //单选
+      if(question[index].type==0){
+        for(var i =0;i<question[index].selector.length;i++){
+          var $input = $("<p><input type='radio' name='radio' value='"+i+"' onclick='toselect(this)' >"+question[index].selector[i].option+"</p>")
+          $("#questiondiv").append($input);
+        }
+        //如果是回头再答题,要把他先前的答案显示
+        var temp = answer[index].ans[0];
+        $("input[value='"+temp+"']")[0].checked = true;
       }
+
+      //多选
+      if(question[index].type==1){
+        for(var i =0;i<question[index].selector.length;i++){
+          var $input = $("<p><input type='checkbox' name='checkbox' value='"+i+"' onclick='toselect1(this)' >"+question[index].selector[i].option+"</p>")
+          $("#questiondiv").append($input);
+        }
+        //如果是回头再答题,要把他先前的答案显示
+        for(var j=0;j<answer[index].ans.length;j++){
+          var temp = answer[index].ans[j];
+          $("input[value='"+temp+"']")[0].checked = true;
+        }
+      }
+
     }
 
     /*设置上一题下一题的点击事件*/
@@ -304,14 +359,44 @@
       else
         alert("已是最后一题!");
     });
+    //提交按钮
+    $("#submit").click(function () {
+      alert(answer[0].ans+"  "+answer[1].ans);
+    });
 
     /*点击答案的时候,存储答案到临时数组*/
 //    $(".question input").
+    //单选
     function toselect(obj){
-      var $radiolist = $(document.getElementsByName("radio"));
-//      alert("点击了"+ $radiolist.indexOf(obj));
-      alert("点击了"+ $("input[name='radio']:checked").val());
+      //点击之后,设置该题目对应的状态颜色变化
+      $("td:eq("+where+")").css("background","#FF0000");
+      //存储当前答案
+      var a = {};
+      a.ans = [];
+      a.ans[0] = $("input[name='radio']:checked").val();
+      answer[where] = a;
     }
+    //多选
+    function toselect1(obj){
+      //点击之后,设置该题目对应的状态颜色变化
+      $("td:eq("+where+")").css("background","#FF0000");
+      //存储当前答案
+      var a = document.getElementsByName("checkbox");
+      var b = {};
+      b.ans=[];
+      for(var i =0;i<a.length;i++){
+        if(a[i].checked){
+          b.ans[b.ans.length] = a[i].value;
+        }
+      }
+      answer[where] = b;
+
+    }
+    //设置点击表格td,跳转到对应的题目
+    $("table td").click(function () {
+      alert(this.cellIndex);
+      toquestion(this.cellIndex);
+    });
 
     /*初始化*/
     $(function () {
