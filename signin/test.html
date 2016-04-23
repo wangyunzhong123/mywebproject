@@ -164,6 +164,19 @@
     .tab3_question_img{width: 30px;height: 30px;}
     .tab3_question_reanswer{float:right; margin-right: 6%;}
     .tab3_add_question{float:right; margin-top: 4%; margin-right: 6%;width: 90px;}
+
+    .chosepersonimg {
+      margin: 10px auto;
+      background: transparent;
+    }
+    .imgimg{
+      position: relative;
+      float: right;
+      align-content: flex-end;
+      text-align: right;
+      top: 30px;
+      right: 10px;
+    }
   </style>
 
 
@@ -171,9 +184,23 @@
 <body>
 <div class="contentt">
   <div class="img-content">
+    <div class="imgimg">
+      <div class="chosepersonimg">
+        <button id="changepersonimg">更改头像</button>
+      </div>
+      <div class="chosepersonimg">
+        <button id="changebgimg">更改背景</button>
+      </div>
+      <div class="chosepersonimg">
+        <button id="uploadimg">上传图片</button>
+      </div>
+    </div>
+
     <div class="img-content-img"><img class="img-circle " src="./img/person.png" width="110px" height="90px"></div>
     <div class="img-content-name"><span>王二小</span></div>
     <div class="img-content-id"><span>ID:32443563</span></div>
+
+
 
   </div>
   <div width="100%" class="cate_tab">
@@ -228,64 +255,68 @@
       </div>
     </div><div class="diver">
   </div>
-    <div class="row wang_weui_cell">
+    <div class="row  wang_weui_cell">
       <div class="col-xs-3 wang_weui_cell_bd">
-        身高
+        年龄
       </div>
       <div class="col-xs-9 wang_weui_cell_ft">
-        电饭锅
+        <span>电饭锅</span>
       </div>
     </div><div class="diver">
-  </div>
-    <div class="row wang_weui_cell">
-      <div class="col-xs-3 wang_weui_cell_bd">
-        学历
-      </div>
-      <div class="col-xs-9 wang_weui_cell_ft">
-       电饭锅
-      </div>
-    </div><div class="diver">
-  </div>
-    <div class="row wang_weui_cell">
-      <div class="col-xs-3 wang_weui_cell_bd">
-        职业
-      </div>
-      <div class="col-xs-9 wang_weui_cell_ft">
-       电饭锅
-      </div>
-    </div><div class="diver">
-  </div>
-    <div class="row wang_weui_cell">
-      <div class="col-xs-3 wang_weui_cell_bd">
-        收入
-      </div>
-      <div class="col-xs-9 wang_weui_cell_ft">
-        电饭锅
-      </div>
-    </div><div class="diver">
-  </div>
-    <div class="row wang_weui_cell">
-      <div class="col-xs-3 wang_weui_cell_bd">
-        居住地
-      </div>
-      <div class="col-xs-9 wang_weui_cell_ft">
-        电饭锅
-      </div>
-    </div><div class="diver">
-  </div>
-    <div class="row wang_weui_cell">
-      <div class="col-xs-3 wang_weui_cell_bd">
-        籍贯
-      </div>
-      <div class="col-xs-9 wang_weui_cell_ft">
-         东风公司
-      </div>
+  </div><div class="row  wang_weui_cell">
+    <div class="col-xs-3 wang_weui_cell_bd">
+      年龄
     </div>
+    <div class="col-xs-9 wang_weui_cell_ft">
+      <span>电饭锅</span>
+    </div>
+  </div><div class="diver">
+  </div><div class="row  wang_weui_cell">
+    <div class="col-xs-3 wang_weui_cell_bd">
+      年龄
+    </div>
+    <div class="col-xs-9 wang_weui_cell_ft">
+      <span>电饭锅</span>
+    </div>
+  </div><div class="diver">
+  </div><div class="row  wang_weui_cell">
+    <div class="col-xs-3 wang_weui_cell_bd">
+      年龄
+    </div>
+    <div class="col-xs-9 wang_weui_cell_ft">
+      <span>电饭锅</span>
+    </div>
+  </div><div class="diver">
+  </div><div class="row  wang_weui_cell">
+    <div class="col-xs-3 wang_weui_cell_bd">
+      年龄
+    </div>
+    <div class="col-xs-9 wang_weui_cell_ft">
+      <span>电饭锅</span>
+    </div>
+  </div><div class="diver">
+  </div><div class="row  wang_weui_cell">
+    <div class="col-xs-3 wang_weui_cell_bd">
+      年龄
+    </div>
+    <div class="col-xs-9 wang_weui_cell_ft">
+      <span>电饭锅</span>
+    </div>
+  </div><div class="diver">
+  </div><div class="row  wang_weui_cell">
+    <div class="col-xs-3 wang_weui_cell_bd">
+      年龄
+    </div>
+    <div class="col-xs-9 wang_weui_cell_ft">
+      <span>电饭锅</span>
+    </div>
+  </div><div class="diver">
+  </div>
 
-    <!--<span class="line_begin" >内心独白:</span>-->
-    <!--<div width="100%" >-->
-      <!--<textarea type="text" class="form-control line_begin_1 " readonly="readonly"  rows=6 placeholder="填写内心独白" >${user.dubai}</textarea>-->
-    <!--</div>-->
+
+
+
+
 
   </div>
 
@@ -298,6 +329,8 @@
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/zoom.min.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
 <script type="text/javascript">
   $(function(){
     $(document.getElementById("tab2")).hide();
@@ -332,7 +365,19 @@
 //      'allowMultiple'	: false
 //    });
 
-  })
+  });
+
+  //更改背景
+  $(".img-content").click(function(){
+    alert("改变背景");
+    $(".img-content").css("background-image","url(./img/1.jpg)");
+  });
+
+  //更改背景
+  $(".img-circle").click(function(){
+    alert("改变头像");
+    $(".img-circle").attr("src","./img/1.jpg");
+  });
 
   function tab_change(which){
     var $tabs = $("li");
@@ -366,6 +411,5 @@
     }
   }
 </script>
-<script src="./js/jquery.min.js"></script>
-<script src="./js/bootstrap.min.js"></script>
+
 </html>
