@@ -2,35 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  <link href="./css/style_w.css" rel="stylesheet">
+  <style type="text/css">
+    .head{
+      margin: 10px auto 0px 0px;
+    }
+    .nav{
+      width: 100%;
+      height: 36px;
+      line-height: 36px;
+      background-image: url('./images/nav_bg.png') ;
+      text-align: center;
+      font-size: 15px;
+      font-family: "微软雅黑", "Microsoft Yahei";
+      font-weight: bold;
+    }
+    .nav a:link{text-decoration:none; color:#FFF;}
+    .nav a:visited{text-decoration:none; color:#fff;}
+    .nav a:hover{text-decoration:none; color:#fff;}
+    .nav a:active{text-decoration:none; color:#fff;}
+    .nav a.web:visited{text-decoration:none; color:#fff;}
+    .nav-1:hover{
+      background-image: url('./images/nav_at.png') ;
+    }
+  </style>
 </head>
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<!-- Save for Web Slices (越秀区居民健康素养学习与测评平5-1-恢复的.jpg) -->
-<table id="__01" width="1318"  border="none" cellpadding="0" cellspacing="0" frame="void">
-  <tr>
-  <td>
-    <img src="images/image_01.jpg" width="158" height="86" alt=""></td>
-  <td colspan="9">
-    <a href="#"><img src="images/image_02.jpg" width="468" height="86" alt=""></a></td>
-  <td colspan="8">
-    <img src="images/image_03.jpg" width="692" height="86" alt=""></td>
-  </tr>
-  <tr width="100%"  class="tr_two">
-    <td>
-      <img src="images/image_04.jpg" width="158" height="36" alt=""></td>
-    <td width="78" height="36" class="font_center">
-      <a href="index.html">首页</a></td>
-    <td colspan="2" width="112" height="36" class="font_center">
-      <a href="">在线学习</a></td>
-    <td width="109" height="36" class="font_center">
-      <a href="">健康测评</a></td>
-    <td colspan="4" width="116" height="36" class="font_center">
-      <a href="">健康视频</a></td>
-    <td colspan="2" width="115" height="36" class="font_center">
-      <a href="">健康游戏</a></td>
-    <td colspan="7">
-      <img src="images/image_10.jpg" width="100%" height="36" alt=""></td>
-  </tr>
-  </table>
+<div class="head">
+  <!--标题栏-->
+  <div class="row">
+    <div class="col-md-1"><span></span></div>
+    <div class="col-md-5"><a href="#"><img src="images/title.png" alt=""></a></div>
+    <div class="col-md-5"><img src="images/image_03.jpg" alt=""></div>
+  </div>
+  <!--导航栏-->
+  <div class="row nav">
+    <div class="col-md-1"><span></span></div>
+    <div class="col-md-1 nav-1" id="nav-1"><a href="index.html">首页</a></div>
+    <div class="col-md-1 nav-1" id="nav-2"><a href="learn.html">在线学习</a></div>
+    <div class="col-md-1 nav-1" id="nav-3"><a href="test.html">健康测评</a></div>
+    <div class="col-md-1 nav-1" id="nav-4"><a href="video.html">健康视频</a></div>
+    <div class="col-md-1 nav-1" id="nav-5"><a href="game.html">健康游戏</a></div>
+    <div class="col-md-6"></div>
+  </div>
+</div>
 </body>
 </html>

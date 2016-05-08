@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>视频播放</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="./css/style_w.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <style type="text/css">
+    .video{margin:20px auto;text-align:center;}
+
+  </style>
+</head>
+<body>
+<div id="head" class="head"></div>
+<div class="video">
+  <h2>健康城市形象宣传片</h2>
+  <video src="http://112.124.64.64:8080/healthTest/src/1.mp4" width="640" height="480" controls="controls">
+    你的浏览器不支持视频
+  </video>
+</div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $("#head").load("head.html");
+</script>
+</html>
