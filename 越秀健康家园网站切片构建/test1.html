@@ -1,0 +1,3410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>越秀健康家园</title>
+  <!--之前的---->
+  <!-- Bootstrap Core CSS -->
+  <link href="resources/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- MetisMenu CSS -->
+  <link href="resources/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <!-- <link href="resources/dist/css/sb-admin-2.css" rel="stylesheet"> -->
+
+  <!-- Custom Fonts -->
+  <link href="resources/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- jQuery -->
+  <script src="resources/bower_components/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="resources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- Metis Menu Plugin JavaScript -->
+  <script src="resources/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <!-- <script src="resources/dist/js/sb-admin-2.js"></script> -->
+
+  <!--后来的---->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style  type="text/css">
+
+    .myhead
+    {
+      height: 44px;
+      text-align:center;
+      font-size:18px;
+      line-height: 44px;
+      font-family: "Microsoft Yahei",Arial;
+      font-weight: lighter;
+      letter-spacing: 0;
+      color: #FFFFFF;
+      margin-top: 0px;
+      background-color: #099fde;
+      font-color:#000000
+    }
+    .flight-btnsrh {
+      width: 100%;
+      height: 44px;
+      line-height: 44px;
+      font-size: 18px;
+      color: #fff;
+      background: #ff7d13;
+      border-radius: 3px;
+      margin: 30px 0 15px;
+    }
+    button{
+      font: 400 14px/1.5 "Hiragino Sans GB","Microsoft YaHei",hei,Arial,"Lucida Grande",Verdana;
+      border: 0;
+    }
+    ul, ol {
+      padding-left: 0;
+      list-style-type: none;
+    }
+    .h{
+      text-align:center;
+      font-size:20px;
+      border-bottom: 1px solid #d9dadc;
+      padding-bottom: 10px;
+    }
+    span{
+      color: #8d8d8d;
+    }
+    li{
+      border-bottom:1px solid #eee;
+      font-size: 15px;
+      list-style-type:none;
+    }
+    .label{
+      color: #000000;
+      font-size:20px;
+      padding: 0;
+    }
+    .label1{
+      padding: 7px;
+      margin-bottom: 0px;
+      width: 100%;
+    }
+    .ulpanel {
+      margin-bottom: 20px;
+      background-color: #fff;
+      border: 1px solid transparent;
+      border-radius: 4px;
+    }
+    .p{
+      color: #000;
+      font-size: 20px;
+      margin: 0 0 0 0;
+      font-weight: 700;
+    }
+    .input{
+      text-align:center;
+      border:none #FFF;
+      border-bottom:#000 solid 1px;
+      outline:none;
+    }
+    body{
+      margin: 30px 250px 30px 300px;
+    }
+    .head{
+      margin-bottom: 90px;
+    }
+  </style>
+</head>
+
+<body onselectstart="return false" tabindex="10000" class="">
+<div id="head" class="head"></div>
+
+   <!--<li class="dropdown pull-right" style="margin-top:-40px;margin-right:5px">-->
+  <!--<a class="dropdown-toggle " data-toggle="dropdown" href="#">-->
+    <!--<i class="fa fa-user fa-fw"style="color:purple"></i>  <i class="fa fa-caret-down"style="color:purple"></i>-->
+  <!--</a>-->
+  <!--&lt;!&ndash;<ul class="dropdown-menu dropdown-user">&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><a href="#"><i class="fa fa-user fa-fw" style="color:purple"></i> <%=session.getAttribute("user") %></a>&ndash;&gt;-->
+    <!--&lt;!&ndash;</li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li class="divider"></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><a href="logout"><i class="fa fa-sign-out fa-fw"></i> 退出</a>&ndash;&gt;-->
+    <!--&lt;!&ndash;</li>&ndash;&gt;-->
+  <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+  <!--&lt;!&ndash; /.dropdown-user &ndash;&gt;-->
+<!--</li> -->
+
+<div class="container" id="index">
+
+  <div id="title" class="h">全国居民健康素养监测调查问卷</div>
+  <div id="introduce">
+    <br><br>
+    <input class="input">省（区、市）&nbsp;&nbsp;
+    <input class="input">市&nbsp;&nbsp;&nbsp;&nbsp;
+    <input class="input">县（市、区）
+    <br><br>
+    <input class="input">街道（乡镇）&nbsp;&nbsp;
+    <input class="input">居委会（村）
+    <br><br>
+  </div>
+</div>
+<div class="container" id="divProblemPanel">
+  <br>
+  <p class="text-justify p">一、判断题</p>
+  <br>
+  <div name="problem" id="problem1">
+    <h4>A01、预防流感最好的办法是服用抗生素（消炎药）。</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem1" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem2">
+    <h4>A02、得了高血压病，只要按医生的要求用药就能控制血压，不用戒烟、限酒。</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem2" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem3">
+    <h4>A03、保健食品不是药品，也不能代替药品治病。</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem3" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem4">
+    <h4>A04、输液疗效好、作用快，所以有病后要首先选择输液。</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem4" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem5">
+    <h4>A05、国家为自愿接受艾滋病咨询检测的人员免费提供咨询和初筛检测。</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem5" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem6">
+    <h4>A06、用人单位不得安排孕妇从事对本人和胎儿有危害的作业。</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem6" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem6" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem7">
+    <h4>A07、水果和蔬菜的营养成份相近，可以用吃水果代替吃蔬菜。</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem7" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem7" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem8">
+    <h4>A08、正常人的体温在一天内可以上下波动，但是波动范围一般不会超过1℃。</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem8" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem8" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem9">
+    <h4>A09、网络成瘾既影响青少年的身体健康，也影响其心理健康。</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem9" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem9" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem10">
+    <h4>A10、儿童青少年也可能发生抑郁症。</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem10" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem10" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem11">
+    <h4>A11、食品标签上必须注明生产日期和保质期。</h4>
+    <ul class="ulpanel ulpanel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem11" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem11" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem12">
+    <h4>A12、长期睡眠不足不仅会加快衰老，还会诱发多种健康问题。</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem12" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem12" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem13">
+    <h4>A13、居民可以到社区卫生服务中心（站）和乡镇卫生院（村卫生室）免费获得健康知识。</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem13" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem13" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem14">
+    <h4>A14、“久病成良医”，慢性病患者可以根据自己的感受调整治疗方案。</h4>
+    <ul class="ulpanel ulpanel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem14" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem14" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem15">
+    <h4>A15、健康体检发现的健康问题和疾病，如没有症状，可暂时不采取措施。</h4>
+    <ul class="ulpanel ulpanel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem15" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、正确</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem15" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不正确</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+  <br>
+
+  <p class="text-justify p">二、单选题（每题后面给出的4个选项中，只有1个正确答案，请选择相应选项。如果不知道，请选择D）</p>
+  <br>
+  <div name="problem" id="problem16">
+    <h4>B01、关于健康的概念，描述完整的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem16" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、健康就是体格强壮，没有疾病</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem16" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、健康就是心理素质好，体格强壮</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem16" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、健康不仅是没有疾病，而是身体、心理和社会适应的完好状态</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem16" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem17">
+    <h4>B02、提高居民健康水平，需要：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem17" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、自己努力</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem17" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、国家政策支持</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem17" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、国家和社会全体成员共同努力</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem17" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem18">
+    <h4>B03、通常情况下，献血者要到______进行无偿献血。</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem18" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、医院</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem18" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、血液中心（血站）或其献血车</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem18" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、疾病预防控制中心</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem18" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem19">
+    <h4>B04、乙肝可以通过以下哪些方式传染给他人？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem19" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、与病人或感染者一起工作、吃饭、游泳</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem19" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、可以通过性行为、输血、母婴传播</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem19" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、同病人或感染者说话、握手、拥抱</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem19" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem20">
+    <h4>B05、关于自测血压的说法，错误的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem20" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、自测血压对高血压诊断有参考价值</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem20" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、高血压患者定期自测血压，可为医生制定治疗方案和评价治疗效果提供依据</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem20" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、高血压患者只要自测血压稳定，就可以不用定期到门诊进行随访治疗了</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem20" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem21">
+    <h4>B06、关于吸烟危害的说法，哪个是错误的？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem21" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、烟草依赖是一种慢性成瘾性疾病</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem21" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、吸烟可以导致多种慢性病</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem21" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、低焦油卷烟危害比普通卷烟小</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem21" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem22">
+    <h4>B07、下列哪项不是癌症早期危险信号？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem22" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、身体出现异常肿块</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem22" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不明原因便血</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem22" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、体重增加</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem22" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem23">
+    <h4>B08、关于慢性病的描述，以下说法正确的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem23" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、慢性病都是吃出来的</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem23" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、年纪大了才得慢性病</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem23" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、慢性病很难治愈</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem23" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem24">
+    <h4>B09、发生煤气中毒后，救护者首先应该怎样处理煤气中毒的人？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem24" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、给病人喝水</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem24" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、将病人移到通风处</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem24" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、拨打120，送医院治疗</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem24" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem25">
+    <h4>B10、对肺结核病人的治疗，以下说法正确的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem25" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、没有优惠政策</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem25" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、国家免费提供抗结核药物</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem25" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、住院免费</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem25" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem26">
+    <h4>B11、国家免费为农村怀孕或准备怀孕的妇女补服叶酸，目的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem26" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、减少自然流产</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem26" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、预防神经管缺陷（脊柱裂、无脑儿）</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem26" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、降低孕产妇死亡率</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem26" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem27">
+    <h4>B12、从事有毒有害作业时，工作人员应该：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem27" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、穿工作服</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem27" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、戴安全帽</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem27" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、使用个人职业病防护用品</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem27" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem28">
+    <h4>B13、碘缺乏最主要的危害是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem28" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、患上“非典”</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem28" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、影响智力和生长发育</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem28" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、引起高血压</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem28" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem29">
+    <h4>B14、为了有效去除蔬菜上残留的农药，蔬菜洗净后还需要用清水浸泡多长时间？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem29" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、 5分钟</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem29" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、10分钟</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem29" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、30分钟</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem29" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem30">
+    <h4>B15、剧烈活动时，会因大量出汗而丢失体内水分。在这种情况下，最好补充：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem30" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、白开水</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem30" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、含糖饮料</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem30" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、淡盐水</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem30" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem31">
+    <h4>B16、下面的描述中，健康的心理是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem31" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、经常感觉自己无能</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem31" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、对未来不抱希望</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem31" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、遇到困难时，积极想办法解决</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem31" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem32">
+    <h4>B17、关于国家基本公共卫生服务的理解，错误的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem32" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、主要在大医院开展</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem32" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、在基层医疗卫生机构开展</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem32" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、老百姓可免费享受</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem32" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem33">
+    <h4>B18、下列哪种情况下，应暂缓给儿童打疫苗：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem33" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、哭闹时</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem33" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、感冒发烧时</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem33" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、饭后半小时内</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem33" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem34">
+    <h4>B19、出现发热症状，正确做法是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem34" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、及时找医生看病</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem34" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、根据以往经验，自行服用退烧药</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem34" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、观察观察再说</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem34" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem35">
+    <h4>B20、当患者依照医生的治疗方案服药后出现了不良反应，正确的做法是:</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem35" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、自行停药</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem35" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、找医生处理</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem35" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、继续服药</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem35" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem36">
+    <h4>B21、孕妇需要到什么地方建立“孕产妇保健卡”？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem36" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、街道办事处</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem36" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、社区卫生服务中心或乡镇卫生院</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem36" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、妇幼保健院</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem36" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem37">
+    <h4>B22、要想了解某个医疗机构是否合法，可以通过以下哪种方法判断？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem37" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、根据医院规模判断</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem37" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、咨询当地卫生局，或到卫生局网站上查询</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem37" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、根据医疗设施条件判断</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem37" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem38">
+    <h4>B23、以下哪些人群应该关注健康知识？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem38" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、病人</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem38" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、超重、肥胖的人</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem38" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、所有人</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem38" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem39">
+    <h4>B24、某地发生烈性传染病，以下做法正确的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem39" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、这个病与我无关，不必理会</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem39" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、如果我是当地人，就会关注疫情</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem39" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、不管是否是当地人，都需关注疫情变化</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem39" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem40">
+    <h4>B25、某市发生一起食物中毒事件，以下哪个途径获得的信息最为可信？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem40" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、网民在网站上发布的言论</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem40" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、同事们的议论</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem40" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、该市卫生部门发布的信息</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem40" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem41">
+    <h4>B26、警示图<img src="resources/images/warning.jpg" height="70" width="70">表示</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem41" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、该场所易发生火灾</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem41" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、该场所某区域存在易爆物，不允许靠近</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem41" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、该物品具有毒性或该场所存在有毒物品</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem41" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem42">
+    <h4>B27、关于正确就医，以下说法错误的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem42" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、尽可能详细地向医生讲述病情</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem42" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、如果有以往的病历、检查结果等，就医时最好携带</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem42" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、为了让医生重视，可以把病情说得严重些</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem42" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem43">
+    <h4>B28、某药品标签上印有“OTC”标识，则该药品为：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem43" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、处方药，必须由医生开处方才能购买</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem43" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、非处方药，不用医生开处方，就可以购买</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem43" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、非处方药，不用医生开处方，就可以购买</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem43" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem44">
+    <h4>B29、关于开窗通风，以下说法错误的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem44" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、冬天要少开窗或不开窗，避免感冒</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem44" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、开窗通风可以稀释室内空气中的细菌和病毒</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem44" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、开窗通风可以使阳光进入室内，杀灭多种细菌和病毒</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem44" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem45">
+    <h4>B30、用玻璃体温计测体温时，应该如何读取数值？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem45" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、手持体温计水银端水平读取</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem45" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、手持体温计玻璃端竖直读取</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem45" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、手持体温计玻璃端水平读取</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem45" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem46">
+    <h4>B31、成年人的正常脉搏次数是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem46" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、30～50次/分钟</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem46" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、60～100次/分钟</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem46" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、100～120次/分钟</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem46" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem47">
+    <h4>B32、妇女从怀孕到分娩，至少要进行几次孕期检查？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem47" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、3次</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem47" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、5次</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem47" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、7次</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem47" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem48">
+    <h4>B33、性生活中正确使用安全套，可以预防哪种疾病？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem48" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、结核病</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem48" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、甲肝</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem48" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、艾滋病</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem48" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem49">
+    <h4>B34、刘大妈在小区散步时，被狗咬伤。皮肤有破损，但不严重。以下做法正确的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem49" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、自行包扎处理</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem49" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、清洗伤口，尽快打狂犬病疫苗</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem49" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、伤口不大，不予理睬</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem49" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem50">
+    <h4>B35、皮肤轻度烫伤出现水泡，以下做法正确的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem50" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、挑破水泡，这样恢复的快</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem50" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、水泡小不用挑破，水泡大就要挑破</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem50" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、不要挑破水泡，以免感染</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem50" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem51">
+    <h4>B36、发生火灾时，正确逃生方法是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem51" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、用双手抱住头或用衣服包住头，冲出火场</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem51" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、向头上和身上淋水，或用浇湿的毛毯包裹身体，冲出火场</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem51" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、边用衣服扑打火焰，边向火场外撤离</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem51" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem52">
+    <h4>B37、对出血的伤口进行包扎时，伤口上应覆盖：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem52" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、药用棉花</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem52" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、有绒毛的布</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem52" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、干净的纱布</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem52" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem53">
+    <h4>B38、关于超过保质期的食品，以下说法正确的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem53" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、只要看起来没坏，就可以吃</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem53" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、只要煮熟煮透后，就可以吃</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem53" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、不能吃</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem53" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem54">
+    <h4>B39、下列药物中，长期服用会成瘾的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem54" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、抗生素</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem54" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、镇痛药</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem54" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、降压药</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem54" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem55">
+    <h4>B40、抢救触电者时，以下做法错误的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem55" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、关闭电源开关</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem55" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、拔下电源插头</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem55" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、用手去拉¬触电者</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem55" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+  <br>
+
+  <p class="text-justify p">三、多选题（每题有2个或2个以上正确选项，请选择你认为正确的选项。如果不知道，请选择E）</p>
+  <br>
+
+  <div name="problem" id="problem56">
+    <h4>C01、 关于促进心理健康的方法，以下说法正确的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem56_1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、生活态度要乐观</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem56_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、把目标定格在自己能力所及的范围内</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem56_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、建立良好的人际关系，积极参加社会活动</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem56_4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、通过吸烟、喝酒排解忧愁</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem56_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem57">
+    <h4>C02、 关于肝脏描述，以下说法正确的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem57_1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、能分泌胆汁</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem57_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、有解毒功能</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem57_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、是人体重要的消化器官</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem57_4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、肝脏有左右两个</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem57_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem58">
+    <h4>C03、哪些情况下，结核病人可能会将结核病传染给他人？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem58_1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、打喷嚏</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem58_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、咳嗽</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem58_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、大声说话</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem58_4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、共同使用马桶</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem58_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem59">
+    <h4>C04、孩子出现发热、皮疹等症状，家长应该：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem59_1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、及时去医院就诊</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem59_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、应暂停去幼儿园</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem59_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、及时通知孩子所在幼儿园的老师</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem59_4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、可以让孩子照常去幼儿园</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem59_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem60">
+    <h4>C05、下面的说法，错误的有：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem60_1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、老年人治疗骨质疏松，为时已晚</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem60_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、骨质疏松是人衰老的正常生理现象</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem60_3" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、中老年人饮奶可以减少骨质丢失</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem60_4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、多运动可以预防骨质疏松</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem60_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem61">
+    <h4>C06、日常生活中，应采取哪些健康生活方式预防慢性病的发生？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem61_1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、戒烟限酒</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem61_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、合理营养</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem61_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、适量运动</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem61_4" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、心理平衡</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem61_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem62">
+    <h4>C07、选购保健食品时，应注意：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem62_1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、包装上是否有保健食品批准文号</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem62_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、查看保健功能和适宜的人群</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem62_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、查看生产日期</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem62_4" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、查看保质期</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem62_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem63">
+    <h4>C08、发现病死禽畜，应做到：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem63_1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、不宰杀，不加工</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem63_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不出售，不运输</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem63_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、不食用</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem63_4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、煮熟煮透可以吃</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem63_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem64">
+    <h4>C09、遇到呼吸、心跳骤停的伤病员，应采取哪些措施？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem64_1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、人工呼吸</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem64_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、胸外心脏按压</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem64_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、拨打急救电话</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem64_4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、给予高血压治疗药物</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem64_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem65">
+    <h4>C10、吃豆腐、豆浆等大豆制品的好处有：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem65_1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、对身体健康有好处</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem65_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、对心血管病患者有好处</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem65_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、增加优质蛋白质的摄入量</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem65_4" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、防止过多消费肉类带来的不利影响</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem65_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem66">
+    <h4>C11、运动对健康的好处包括：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem66_1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、保持合适的体重</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem66_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、预防慢性病</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem66_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、减轻心理压力</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem66_4" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、改善睡眠</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem66_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem67">
+    <h4>C12、某报纸上说，任何糖尿病患者通过服用某降糖产品，都可以完全治愈。看到这条信息后，下面哪些做法是错误的？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem67_1" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、肯定是错误的，不能相信</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem67_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、这消息真好，赶紧去告诉糖尿病朋友</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem67_3" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、向社区医生咨询、核实</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem67_4" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、赶紧去购买</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem67_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem68">
+    <h4>C13、咳嗽、打喷嚏时，正确的处理方法是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem68_1" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、用手直接捂住口鼻</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem68_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、用手帕或纸巾捂住口鼻</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem68_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、用胳膊肘弯处捂住口鼻</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem68_4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不用捂住口鼻</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem68_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem69">
+    <h4>C14、以下关于住院时间的看法，正确的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem69_1" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、住院时间越长，治疗效果越好</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem69_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、治疗效果与住院时间长短没有必然的联系</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem69_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、住院时间长短依病情而定</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem69_4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、住院时间过短是医生不负责任的表现</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem69_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem70">
+    <h4>C15、关于2型糖尿病患者健康管理服务，以下说法正确的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem70_1" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、只有60岁以上的老人才可享受</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem70_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、社区内被确诊的2型糖尿病患者均可享受</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem70_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、1年内可获得4次免费空腹血糖监测</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem70_4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、免费空腹血糖监测不受次数限制，依病情而定</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem70_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem71">
+    <h4>C16、 母乳喂养对婴儿的好处：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem71_1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、母乳喂养可以使婴儿少生病</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem71_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、母乳是婴儿最好的天然食品</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem71_3" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、婴儿配方奶粉比母乳营养更丰富</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem71_4" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、母乳喂养有利于婴儿的心理发育</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem71_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem72">
+    <h4>C17、保管农药时，应注意：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem72_1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、农药应保管在固定、安全的地方</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem72_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、农药不能与食品放在一起</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem72_3" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、如果手上不小心沾染了农药，只要皮肤没有破损，就不用冲洗</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem72_4" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、农药要放在小孩接触不到的地方</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem72_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem73">
+    <h4>C18、在户外，出现雷电天气时，以下做法正确的是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem73_1" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、躲在大树下</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem73_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、远离高压线</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem73_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、避免打手机</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem73_4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、站在高处</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem73_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+  <br>
+
+  <p class="text-justify p">四、情景题（请您先阅读材料，然后回答相关问题。单选题只有1个正确答案，多选题有2个或2个以上正确答案。如果不知道，单选题请选择D，多选题请选择E）</p>
+  <p class="text-justify p">（一）以下是阿莫西林胶囊说明书，请阅读后回答问题。</p>
+  <p class="text-justify">【药品名称】 阿莫西林胶囊</p>
+  <p class="text-justify">【适应症】 阿莫西林适用于敏感菌所致的下列感染：</p>
+  <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;1.溶血性链球菌、肺炎链球菌、葡萄球菌所致中耳炎、咽炎、扁桃体炎等上呼吸道感染。</p>
+  <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;2.溶血性链球菌、肺炎链球菌、葡萄球菌所致急性支气管炎、肺炎等下呼吸道感染。 </p>
+  <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;3.本品尚可用于治疗伤寒、伤寒带菌者及钩端螺旋体病。</p>
+  <p class="text-justify">【用法用量】</p>
+  <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;口服。成人一次一粒（0.5g），每6-8小时1次（每日3-4次）。</p>
+  <p class="text-justify">【不良反应】</p>
+  <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;1.恶心、呕吐、腹泻及假膜性肠炎等胃肠道反应。</p>
+  <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;2.皮疹、药物热和哮喘等过敏反应。</p>
+  <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;3.由念珠菌或耐药菌引起的二重感染。 </p>
+  <p class="text-justify">&nbsp;&nbsp;&nbsp;&nbsp;4.偶见兴奋、焦虑、失眠、头晕以及行为异常等中枢神经系统症状。</p>
+  <p class="text-justify">【禁忌】 青霉素过敏及青霉素皮肤试验阳性患者禁用。</p>
+  <br>
+  <div name="problem" id="problem74">
+    <h4>D01、本药物适用于治疗下列哪些疾病？（多选题）</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem74_1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、溶血性链球菌引起的咽炎</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem74_2" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、流感病毒引起的上呼吸道感染</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem74_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、葡萄球菌引起的肺炎</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem74_4" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、伤寒</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem74_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem75">
+    <h4>D02、假设一个成年人在早上8点服用该药，下一次服药时间应该是几点？（单选题）</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem75" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、上午11点~下午1点</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem75" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、下午2点~4点</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem75" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、下午5点~7点</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem75" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem76">
+    <h4>D03、服用该药物，不会引起以下哪种不良反应？（单选题）</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem76" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、恶心</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem76" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、抑郁</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem76" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、失眠</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem76" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+  <br>
+
+  <p class="text-justify p">（二）BMI指体质指数，是目前国际上常用的衡量人体胖瘦程度以及是否健康的一个标准。具体计算方法是以体重（公斤，kg）除以身高（米，m）的平方，即BMI=体重/身高2 (kg /m2)。对于中国成年人，BMI<18.5为体重过低，18.5≤BMI<24为体重正常，24≤BMI<28则为超重，BMI ≥28为肥胖。</p>
+  <br>
+  <div name="problem" id="problem77">
+    <h4>D04、李先生，45岁，身高170厘米，体重160斤，他的BMI该怎样计算？（单选题）</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem77" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、(80)2/170=37.6</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem77" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、80/(1.7)2=27.7</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem77" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、160/(1.7)2=55.4</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem77" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem78">
+    <h4>D05、 参照中国成年人体质指数的标准，李先生属于：（单选题）</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem78" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、肥胖</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem78" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、体重正常</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem78" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、超重</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem78" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem79">
+    <h4>D06、 李先生要控制体重，可以采取以下哪些方式？（多选题）</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem79_1" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、不吃主食</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem79_2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、每天运动至少半小时</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem79_3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、减少油脂摄入</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem79_4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、只吃蔬菜水果</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="problem79_5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="problem" id="problem80">
+    <h4>D07、 李先生容易患以下哪种疾病？（单选题）</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem80" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、高血压</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem80" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、骨质疏松</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem80" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、胃溃疡</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="problem80" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不知道</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+  <br>
+
+  <p class="text-justify p">五、烟草流行调查</p>
+  <br>
+  <div name="survey" id="survey1">
+    <h4>E01、 您现在吸烟吗？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey1" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、每天吸，平均每天吸<input class="input">支（注意：请按包/条数换算成支数。）</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey1" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、吸，但不是每天。平均每周吸<input class="input">支（注意：请按包/条数换算成支数。）</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey1" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、以前吸，但现在不吸&nbsp;&nbsp;&nbsp;&nbsp;→ 跳至 E05</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey1" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、从不吸&nbsp;&nbsp;&nbsp;&nbsp;→ 跳至 E07</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="survey" id="survey2">
+    <h4>E02、 下面哪个选项最符合您关于戒烟的想法？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey2" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、准备在一个月内戒烟</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey2" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、考虑在12个月内戒烟</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey2" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、会戒烟，但不会在12个月内</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey2" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、不想戒烟&nbsp;&nbsp;&nbsp;&nbsp;→ 跳至 E04</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey2" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、不知道&nbsp;&nbsp;&nbsp;&nbsp;→ 跳至 E04</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="survey" id="survey3">
+    <h4>E03、 您会使用以下哪些方式戒烟？（多选题）</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="survey3" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、靠自己毅力戒烟</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="survey3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、拨打戒烟热线</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="survey3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、去戒烟门诊</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="survey3" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、自己购买戒烟药</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="survey3" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、其他</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="survey" id="survey4">
+    <h4>E04、 在过去12个月里，您尝试过戒烟吗？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、是&nbsp;&nbsp;&nbsp;&nbsp;→ 跳至 E06</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey4" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、否&nbsp;&nbsp;&nbsp;&nbsp;→ 跳至 E06</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="survey" id="survey5">
+    <h4>E05、 您停止吸烟多长时间了？（注意：偶尔吸烟的情况不包括在内）</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey5" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、少于1个月</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、1-6个月</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、7-12个月</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、13-23个月&nbsp;&nbsp;&nbsp;&nbsp;→ 跳至 E07</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、2年及以上&nbsp;&nbsp;&nbsp;&nbsp;→ 跳至 E07</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="survey" id="survey6">
+    <h4>E06、 在过去的12个月内，您看病时医护人员是否建议您戒烟？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey6" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、是</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey6" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、否</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey6" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、没去看过病</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="survey" id="survey7">
+    <h4>E07、 通常情况下，您接触二手烟的天数是：</h4>
+    <h4>（二手烟是指吸烟时，吸烟者呼出的以及卷烟末端散发出的烟雾。）</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey7" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、几乎每天</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey7" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、平均每周有4-6天</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey7" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、平均每周有1-3天</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey7" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、没有</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="survey" id="survey8">
+    <h4>E08、 在过去30天内，在您工作的地方是否有人在室内吸烟？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey8" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、是</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey8" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、否</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey8" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、从事户外工作/没工作</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="survey" id="survey9">
+    <h4>E09、 在过去30天内，您是否看到医疗机构有人在室内吸烟？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey9" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、是</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey9" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、否</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey9" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、没去过医疗机构</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="survey" id="survey10">
+    <h4>E10、 在过去30天内，您是否看到政府大楼或政府办公室（专指公务员办公的地方）有人在室内吸烟？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey10" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、是</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey10" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、否</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey10" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、没去过政府大楼或政府办公室</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="survey" id="survey11">
+    <h4>E11、 在过去30天内，您是否看到有人在中小学校里面吸烟？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey11" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、是</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey11" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、否</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="survey11" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、没去过中小学</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="survey" id="">
+    <h4>E12、据您所知，吸烟会不会引起以下疾病（请将相应答案填至选项前面的横线上）：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、会</span>
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不会</span>
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、不知道</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input class="input" name="survey12">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;a. 中风（脑卒中，脑血栓，可引起瘫痪）</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input class="input" name="survey13">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;b. 心脏病发作</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input class="input" name="survey14">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;c. 肺癌</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="survey" id="">
+    <h4>E13、据您所知，吸入二手烟会不会引起下列疾病（请将相应答案填至选项前面的横线上）：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、会</span>
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、不会</span>
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、不知道</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input class="input" name="survey15">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;a. 成人心脏疾病？</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input class="input" name="survey16">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;b. 儿童肺部疾病？</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input class="input" name="survey17">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;c. 成人肺癌？</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <p class="text-justify p">六、基本情况</p>
+  <br>
+  <div name="info" id="info1">
+    <h4>F01、  性别：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="info1" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、男</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info1" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、女</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="info" id="info2">
+    <h4>F02、 出生年月：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input class="input" name="year">
+          <span>年&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <input class="input" name="month">
+          <span>月</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="info" id="info3">
+    <h4>F03、 您的民族：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="info3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、汉族</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、回族</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、苗族</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info3" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、维吾尔族</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info3" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、满族</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info3" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;F、壮族</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info3" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;G、其他</span>
+          <input class="input" name="nation">
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="info" id="info4">
+    <h4>F04、 您的文化程度：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="info4" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、不识字或识字很少</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info4" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、小学</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info4" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、初中</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、高中/职高/中专</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、大专/本科</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info4" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;F、硕士及以上</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="info" id="info5">
+    <h4>F05、 您的职业是：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="info5" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、公务员</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info5" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、教师</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info5" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、医务人员</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info5" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、其他事业单位人员</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、学生</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;F、农民</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;G、其他企业人员</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;H、工人</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info5" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;I、其他</span>
+          <input class="input" name="occupation">
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="info" id="info6">
+    <h4>F06、 您的家庭常住人口数<input class="input" name="householdSize">人（指在家居住半年以上）</h4>
+  </div>
+
+  <div name="info" id="info7">
+    <h4>F07、 过去一年，您家庭年收入大约是<input class="input" name="annualIncome">元</h4>
+  </div>
+
+  <div name="info" id="info8">
+    <h4>F08、 您现在是否患有以下慢性病？（可多选）</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="info8" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、没有患慢性病&nbsp;&nbsp;&nbsp;&nbsp; → 跳至 F10</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="info8" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、高血压</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="info8" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、胃肠炎</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="info8" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、糖尿病</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="info8" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、类风湿关节炎</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="info8" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;F、脑血管病（如中风、脑梗塞、脑血栓等）</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="info8" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;G、椎间盘疾病</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="info8" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;H、慢性阻塞性肺病</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="info8" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;I、缺血性心脏病</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="info8" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;J、胆结石胆囊炎</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="info8" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;K、消化性溃疡</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="info8" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;L、癌症</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="checkbox" name="info8" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;M、其他</span>
+          <input class="input" name="chronic">
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="info" id="info9">
+    <h4>F09、 如果您患有以上任何一种疾病，您第一次被确诊到现在有多长时间了？</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input class="input" name="year">
+          <span>年&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <input class="input" name="month">
+          <span>月</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div name="info" id="info10">
+    <h4>F10、 在过去一年里，您认为自己的健康状况：</h4>
+    <ul class="ulpanel panel-black">
+      <li>
+        <label class="label1">
+          <input type="radio" name="info10" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;A、好</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info10" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;B、比较好</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info10" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;C、一般</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info10" data-result="1">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;D、比较差</span>
+        </label>
+      </li>
+      <li>
+        <label class="label1">
+          <input type="radio" name="info10" data-result="0">
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;E、差</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="container" id="result" style="display:none">
+  <h4></h4>
+</div>
+<div class="container">
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">提示</h4>
+        </div>
+        <div class="modal-body">
+          <div id="isCheckedInfo"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+</div>
+<!--底部-->
+<div class="footer">
+  <img src="./images/footer.jpg" width="100%" height="146">
+</div>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $("#head").load("head.html",function(){
+    $("#nav-2").css("background-image","./images/nav_at.png");
+  });
+
+</script>
+<script type="text/javascript">
+  var problemIndex = 0;
+  var testId;
+  $(document).ready(function(){
+    testId = eval('(${testId})');
+    var vote = eval('(${data})');
+    $("#title").html(vote.title);
+    var $problemPanel;
+    var $divProblemPanel = $("#divProblemPanel");
+    for(var i = 0; i < vote.vote_test.length; i++) {
+      $problemPanel = $("<div class='container' name='problem' id='problem"+(i+1)+"' style='display:none'></div>");
+      if(vote.vote_test[i].type == 0) {
+        $("<h4>"+(i+1)+"、"+vote.vote_test[i].title+"   (单选题)</h4>").appendTo($problemPanel);
+      } else {
+        $("<h4>"+(i+1)+"、"+vote.vote_test[i].title+"   (多选题)</h4>").appendTo($problemPanel);
+      }
+      var $ul = $("<ul class='panel panel-black'></ul>");
+      var $input;
+      for(var j = 0; j < vote.vote_test[i].options.length; j++) {
+        var $li = $("<li></li>");
+        var $label = $("<label class='label1'></label>");
+        if(vote.vote_test[i].type == 0) {
+          if(vote.vote_test[i].options[j].result == 0) {
+            $input = $("<input type='radio' name='problem"+(i+1)+"' data-result='0' data-index='"+i+"'>");
+          } else {
+            $input = $("<input type='radio' name='problem"+(i+1)+"' data-result='1' data-index='"+i+"'>");
+          }
+
+        } else {
+          if(vote.vote_test[i].options[j].result == 0) {
+            $input = $("<input type='checkbox' name='problem"+(i+1)+"_"+(j+1)+"' data-result='0' data-index='"+i+"'>");
+          } else {
+            $input = $("<input type='checkbox' name='problem"+(i+1)+"_"+(j+1)+"' data-result='1' data-index='"+i+"'>");
+          }
+
+        }
+        var $span = $("<span>&nbsp&nbsp&nbsp&nbsp"+String.fromCharCode(65+j)+"、"+vote.vote_test[i].options[j].name+"</span>");
+        $input.appendTo($label);
+        $span.appendTo($label);
+        $label.appendTo($li);
+        $li.appendTo($ul);
+      }
+      $ul.appendTo($problemPanel)
+      $problemPanel.appendTo($divProblemPanel);
+    }
+  });
+
+  $("#start").click(function(){
+    var $problem = $("[name=problem]");
+    $problem[0].style.display = "";
+    $("#start")[0].style.display = "none";
+    $("#next")[0].style.display = "";
+    $("#pre")[0].style.display = "";
+    $("#index")[0].style.display = "none";
+    if(problemIndex == $problem.length - 1) {
+      $("#next")[0].style.display = "none";
+      $("#submit")[0].style.display = "";
+      $("#restart")[0].style.display = "none";
+    }
+  });
+
+  $("#restart").click(function(){
+    $("#result")[0].style.display = "none";
+    $("#restart")[0].style.display = "none";
+    $("#index")[0].style.display = "";
+    $("#start")[0].style.display = "";
+    problemIndex = 0;
+  });
+
+  $("#submit").click(function(){
+    if (isChecked()) {
+      var result = 0;
+      var $problem = $("[name='problem']");
+      for (var i = 0; i < $problem.length; i++) {
+        var problemPanel = document.getElementById("problem"+(i+1));
+        var input = problemPanel.getElementsByTagName("input");
+        for (var j = 0; j < input.length; j++) {
+          if(input[j].checked && input[j].attributes['data-result'].nodeValue == 0) {
+            break;
+          } else if (!(input[j].checked) && input[j].attributes['data-result'].nodeValue == 1) {
+            break;
+          }
+          if(j == input.length-1){
+            result++;
+          }
+        }
+      }
+      var score = Math.round(result/$problem.length*100);
+      window.location.href="data.htm?s="+score+"&testId="+testId;
+      /* $("#result").html('<div class="h">测评结果</div>&nbsp<h3 style="text-align:center">您的得分为：'+score+'分</h3>');
+       $("#result")[0].style.display = "";
+       $("#pre")[0].style.display = "none";
+       $("#submit")[0].style.display = "none";
+       $("#restart")[0].style.display = "";
+       $problem[problemIndex].style.display = "none"; */
+    } else {
+      var txtHtml="<p class='text-warning'>" + "本题未完成，请先选择！" + "</p>";
+      $("#isCheckedInfo").html(txtHtml);
+      $("#myModal").modal("show");
+    }
+
+  });
+
+  $( "#next").click(function(){
+    var $problem = $("[name=problem]");
+    if (isChecked()) {
+      if(problemIndex < $problem.length){
+        $problem[problemIndex].style.display = "none";
+        problemIndex++;
+        $problem[problemIndex].style.display = "";
+        if(problemIndex == $problem.length - 1) {
+          $("#submit")[0].style.display = "";
+          $("#next")[0].style.display = "none";
+        }
+      }
+    } else {
+      var txtHtml="<p class='text-warning'>" + "本题未完成，请先选择！" + "</p>";
+      $("#isCheckedInfo").html(txtHtml);
+      $("#myModal").modal("show");
+    }
+
+  });
+
+  $( "#pre").click(function(){
+    if(problemIndex > 0) {
+      var $problem = $("[name=problem]");
+      $problem[problemIndex].style.display = "none";
+      problemIndex--;
+      $problem[problemIndex].style.display = "";
+      $("#submit")[0].style.display = "none";
+      $("#next")[0].style.display = "";
+    }
+
+  });
+
+  function isChecked() {
+    var problemPanel = document.getElementById("problem"+(problemIndex+1));
+    var input = problemPanel.getElementsByTagName("input");
+    for (var j = 0; j < input.length; j++) {
+      if(input[j].checked) {
+        break;
+      }
+      if(j == input.length-1){
+        return false;
+      }
+    }
+    return true;
+  }
+</script>
+</body>
+</html>
+

@@ -237,17 +237,30 @@ table tr td{
 }
 .test-list{
   margin-top: 30px;
+  margin-bottom: 300px;
   font-family: "微软雅黑", "Microsoft Yahei";
   font-weight: bold;
   font-size: 22px;
   color: #8bc722;
   text-align: center;
+
 }
 .test-list li a{
   color: #8bc722;
 }
-
-
+.learn-list{
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+.learn-list li{
+  margin: auto auto 10px 60px;
+}
+.learn-list li a{
+  color: #8bc722;
+  font-family: "微软雅黑", "Microsoft Yahei";
+  font-weight: bold;
+  font-size: 16px;
+}
 
 
 

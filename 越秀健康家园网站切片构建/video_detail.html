@@ -15,7 +15,7 @@
 <div id="head" class="head"></div>
 <div class="video">
   <h2>健康城市形象宣传片</h2>
-  <video src="http://112.124.64.64:8080/healthTest/src/1.mp4" width="640" height="480" controls="controls">
+  <video id="video_content" src="http://112.124.64.64:8080/healthTest/src/1.mp4" width="640" height="480" controls="controls">
     你的浏览器不支持视频
   </video>
 </div>
@@ -24,5 +24,21 @@
 <script src="./js/bootstrap.min.js"></script>
 <script type="text/javascript">
   $("#head").load("head.html");
+  function GetRequest() {
+    var url = location.search; //获取url中"?"符后的字串
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+      var str = url.substr(1);
+      strs = str.split("&");
+      for(var i = 0; i < strs.length; i ++) {
+        theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+      }
+    }
+    return theRequest;
+  }
+  var request = new Object();
+  request = GetRequest();
+  var url = request["index"];
+  $("#video_content").attr("src","http://112.124.64.64:8080/healthTest/src/"+url+".mp4");
 </script>
 </html>
