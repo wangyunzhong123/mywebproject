@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+  <link href='http://fonts.useso.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/responsiveslides.css">
+  <script src="http://ajax.useso.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="js/responsiveslides.min.js"></script>
+  <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+
+      // Slideshow 1
+      $("#slider1").responsiveSlides({
+        maxwidth: 1600,
+        speed: 600
+      });
+    });
+  </script>
+  <style type="text/css">
+    .top-nav ul li { float:left;}
+    .top-nav ul li a { width:120px; height:40px; text-align:center; line-height:40px; display:block; border-right:2px solid #ccc; background:#eee; color:#666;}
+    .top-nav ul li ul { position:absolute; display:none;}
+    .top-nav ul li ul li { float:none;list-style: none}
+    .top-nav ul li ul li a { border-right:none; border-top:1px dotted #ccc; background:#f5f5f5;}
+    .top-nav ul li:hover ul{ display:block; }
+
+    .top-nav ul li ul li ul{ position:absolute; display:none;}
+    .top-nav ul li ul li ul li{ float:none;list-style: none}
+    .top-nav ul li ul li ul li a { border-right:none; border-top:1px dotted #ccc; background:#f5f5f5;}
+    .top-nav ul li ul li:hover ul{ display:block; }
+    .image-slider li{ max-width: 100%;}
+  </style>
+</head>
+<body>
+<!---start-wrap--->
+<div class="wrap">
+  <!---start-header--->
+  <div class="header">
+    <!---start-logo--->
+    <div class="logo">
+      <a href="index.html"><img src="images/logo1.png" /></a>
+    </div>
+    <!---start-logo--->
+    <!---start-top-nav--->
+    <div class="top-nav">
+      <ul>
+        <li class="active"><a href="index.html">首页</a></li>
+        <li><a href="about.html">健康知识</a>
+          <ul>
+            <li><a href="#">健康66条</a></li>
+            <li><a href="#">居民保健</a>
+              <!--<ul>-->
+              <!--<li><a href="#">社区居民</a></li>-->
+              <!--<li><a href="#">上班一族</a></li>-->
+              <!--<li><a href="#">育龄妇女</a></li>-->
+              <!--<li><a href="#">中小学生</a></li>-->
+              <!--<li><a href="#">中老年人</a></li>-->
+              <!--</ul>-->
+            </li>
+          </ul>
+        </li>
+        <li><a href="staff.html">健康测评</a>
+          <ul>
+            <li><a href="#">素养测评</a></li>
+            <li><a href="#">人群测评</a></li>
+            <li><a href="#">专题测评</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">健康视频</a></li>
+        <li><a href="contact.html">健康游戏</a></li>
+      </ul>
+    </div>
+    <div class="clear"> </div>
+    <!---End-top-nav--->
+  </div>
+</div>
+</body>

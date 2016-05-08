@@ -1,0 +1,206 @@
+/*让字体居中*/
+.font_center,.font_center_video{
+  text-align: center;
+  align-content: center;
+  font-family:"幼圆 Regular";
+  font-weight:bold;
+  font-color:#FFFFFF;
+}
+.font_center:hover{
+  background-image: url('../images/nav_hover.png') ;
+}
+.tr_two{
+  width: 100%;
+  background-image: url('../images/nav_bg.png') ;
+}
+.tr_two td{
+
+}
+/*去除超链接的样式*/
+.font_center a{
+  text-decoration:none;
+  font-color:#FFFFFF;
+}
+.font_center a:link{text-decoration:none; color:#FFF;}
+.font_center a:visited{text-decoration:none; color:#fff;}
+.font_center a:hover{text-decoration:none; color:#fff;}
+.font_center a:active{text-decoration:none; color:#fff;}
+.font_center a.web:visited{text-decoration:none; color:#fff;}
+.ceping_td{
+  display: inline;
+
+  text-align: center;
+  background-image: url('../images/ceping_notat.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ceping_td img{
+  text-align: center;
+}
+.ceping_td:hover{
+  /*text-align: center;*/
+  /*background-image: url('../images/ceping_at.png') ;*/
+  /*background-repeat: no-repeat;*/
+}
+.ceping_td:active{
+  background-image: url('../images/ceping_at.png') ;
+}
+.zhishi_td{
+  display: inline;
+  /*width: 242px;*/
+  /*height: 242px;*/
+  text-align: center;
+  background-image: url('../images/zhishi_notat.png') ;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.zhishi_td:hover{
+  /*text-align: center;*/
+  /*background-image: url('../images/zhishi_at.png') ;*/
+  /*background-repeat: no-repeat;*/
+}
+.zhishi_td:active{
+  background-image: url('../images/zhishi_at.png') ;
+}
+.head,#__02{
+  margin: 0px 0px 0px 0px ;
+}
+.video{
+
+}
+table{
+  border: none;
+}
+table tr{
+  border: none;
+}
+table tr td{
+  border: none;
+}
+.ceping_zhishi_div{
+  display: inline;
+  text-align: center;
+  align-content: center;
+  background-image: url('../images/test_know_ng.png') ;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ceping_div,.zhishi_div{
+  display: inline;
+
+}
+.ceping_tab{
+  width: 100%;
+  height: 350px;
+  background-image: url('../images/[]_ng.png') ;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.test_tab_1{
+  width: 193px;
+  height: 251px;
+  background-image: url('../images/test_konw_tab_notat.png') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  align-content: center;
+}
+.test_tab_1 img{
+  margin-top: 30px;
+}
+.test_tab{
+  text-align: center;
+  align-content: center;
+  margin-top: 45px;
+}
+.test_tab_1:hover{
+  width: 193px;
+  height: 251px;
+  background-image: url('../images/test_konw_tab_at.png') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  align-content: center;
+}
+.test_tab_a_title{
+  padding-top: 20px;
+  font-size: 25px;
+  color: #00CC00;
+}
+.test_tab_a_detail{
+  margin-top: 13px;
+  font-size: 15px;
+  color: #555555;
+}
+.test_tab_a{
+  margin-top: 20px;
+  font-size: 20px;
+  color: #555555;
+}
+.test_tab_a a{
+  text-decoration:none;
+  border: 1pt solid #555555;
+  border-radius: 8px;
+  padding: 5px 15px;
+}
+.test_tab_1:hover .test_tab_a{
+  color: #FFFFFF;
+}
+.video_title{
+  margin: 25px auto 10px 160px;
+}
+.video_list{
+  margin: auto 160px;
+  align-content: center;
+}
+.video_grid{
+  align-content: center;
+  text-align: center;
+}
+.video_img:hover{
+  background: url('../images/video_hide.png') ;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.more_video{
+  margin: auto 160px;
+  line-height: 60px;
+  background: url('../images/more_video.png') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+  text-align: center;
+}
+.more_video a{
+  text-decoration:none;
+  border: 1pt solid #FFFFFF;
+  border-radius: 8px;
+  padding: 5px 7px;
+}
+.footer{
+  margin-top: 40px;
+}
+.video_title .more_game{
+  text-align: end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

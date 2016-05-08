@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>健康测评</title>
+  <script src="./js/jquery.min.js"></script>
+  <script type="text/javascript">
+    function expend(which){
+//      $("#class1").attr("display","block");
+      switch (which){
+        case 1:
+
+              break;
+        case 3:
+              break;
+      }
+
+    }
+  </script>
+  <style type="text/css">
+    .left-nav{float: left;}
+    .left-nav { border:2px solid #ccc; border-right:none; overflow:hidden; float:left; margin:70px 0 0 100px;}
+    .left-nav ul li a { width:120px; height:40px; text-align:center; line-height:40px; display:block; border-right:2px solid #ccc; background:#eee; color:#666;}
+    .left-nav ul li a:hover{ color:#f00; }
+    .left-nav ul li ul {  display:block;font-size: 12px;}
+    .left-nav ul li ul li { float:none;}
+    .left-nav ul li ul li a { border-top:1px dotted #ccc; background:#f5f5f5;color: #00a1ff}
+    /*.left-nav ul li:hover ul{ display:block; }*/
+    .right-content{float: left;}
+  </style>
+</head>
+<body>
+<div id = head>
+</div>
+<!--中部内容区-->
+<div>
+  <!--左侧导航-->
+  <div class="left-nav">
+    <ul>
+      <li><a href="javascript:expend(1);">素养测评</a></li>
+      <li><a href="javascript:expend(2);">人群测评</a>
+        <ul id="class1">
+          <li><a href="javascript:expend(3);"> >社区测评</a></li>
+          <li><a href="javascript:expend(4);"> >上班一族</a></li>
+          <li><a href="javascript:expend(5);"> >育龄妇女</a></li>
+          <li><a href="javascript:expend(6);"> >中小学生</a></li>
+          <li><a href="javascript:expend(7);"> >中老年人</a></li>
+        </ul>
+      </li>
+      <li><a href="javascript:expend(8);">专题测评</a></li>
+    </ul>
+  </div>
+  <!--右边内容区-->
+  <div id="right-content" class="right-content">
+
+  </div>
+
+</div>
+
+</body>
+<script src="./js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $("#head").load("head.html");
+  //    $("#bottom").load("foot.html");
+  $("#right-content").load("test2.html");
+</script>
+</html>
