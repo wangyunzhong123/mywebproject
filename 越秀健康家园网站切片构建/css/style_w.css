@@ -98,14 +98,17 @@ table tr td{
   text-align: center;
 }
 .test_tab_1{
-  width: 193px;
-  height: 251px;
-  background-image: url('../images/test_konw_tab_notat.png') ;
+  /*width: 193px;*/
+  /*height: 251px;*/
+  /*background-image: url('../images/test_konw_tab_notat.png') ;*/
+  /*background-color: #7bb902;*/
+  background-color: #EEEEEE;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
   align-content: center;
   margin: 1px auto;
+  padding-bottom: 20px;
 }
 .test_tab_1 img{
   margin-top: 30px;
@@ -116,13 +119,16 @@ table tr td{
   margin-top: 45px;
 }
 .test_tab_1:hover{
-  width: 193px;
-  height: 251px;
-  background-image: url('../images/test_konw_tab_at.png') ;
+  /*width: 193px;*/
+  /*height: 251px;*/
+  /*background-image: url('../images/test_konw_tab_at.png') ;*/
+  background-color: #7bb902;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
   align-content: center;
+  margin: 1px auto;
+  padding-bottom: 20px;
 }
 .test_tab_a_title{
   padding-top: 20px;
@@ -138,6 +144,7 @@ table tr td{
   margin-top: 20px;
   font-size: 20px;
   color: #555555;
+  margin-bottom: 20px;
 }
 .test_tab_a a{
   text-decoration:none;
