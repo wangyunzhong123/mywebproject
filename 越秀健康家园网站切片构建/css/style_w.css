@@ -166,6 +166,9 @@ table tr td{
   margin: auto 160px;
   align-content: center;
 }
+.video_list-1{
+  margin: auto 160px 350px 160px;
+}
 .video_grid{
   align-content: center;
   text-align: center;
