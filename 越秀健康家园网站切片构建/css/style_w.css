@@ -130,6 +130,9 @@ table tr td{
   margin: 1px auto;
   padding-bottom: 20px;
 }
+.test_tab_1:hover div{
+  color: #FFFFFF;
+}
 .test_tab_a_title{
   padding-top: 20px;
   font-size: 25px;
@@ -156,15 +159,20 @@ table tr td{
   color: #FFFFFF;
 }
 .video_title{
-  margin: 25px auto 10px 160px;
+  margin: 25px auto 10px 190px;
   font-family: "微软雅黑", "Microsoft Yahei";
   font-weight: bold;
   font-size: 16px;
   color: #8bc722;
+  /*margin: auto 160px;*/
+  /*align-content: center;*/
 }
 .video_list{
   margin: auto 160px;
   align-content: center;
+}
+.video_list-1{
+  margin: auto 160px 350px 160px;
 }
 .video_grid{
   align-content: center;
@@ -173,6 +181,9 @@ table tr td{
 .video_img{
   width: 251px;
   height: 174px;
+}
+.video_desc{
+  margin: 10px auto;
 }
 .video_img:hover{
   background-image: url('../images/video_hide.png') ;
